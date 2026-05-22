@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #054100;
+    --color-secundary: #f5f5f5;
+    --color-information: #9D9D9D;
+    --color-border: #D9D9D9;
+    /* Adicionar variáveis de tamanho de fonte */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:var(--color-secundary);
+}
+
+.boxlogin {
+    padding: 30%;
+    text-align: center;
+}
+
+.boxlogin div{
+    border: 1px solid var(--color-border);
+    padding: 5%;
+    text-align: center;
+}
+
+.boxlogin h2{
+    color: var(--color-primary);
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 3px;
+    
+}
+
+.boxlogin h1{
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 3px;
+    font-style: bold;
+}
+
+.boxlogin label{
+    color: var(--color-information);
+    font-size: 15px;
+    font-weight: 2.5px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.boxlogin input{
+    border: 1px solid var(--color-border);
+    color: var(--color-information);
+    font-size: 16px;
+    font-weight: 1px;
+    letter-spacing: 1px;
+    padding: 3%;
+    text-align: left;
+}
+
+.boxlogin input[type="text"]{
+    text-decoration: underline;
+}
+
+.boxlogin #RememberSenha{
+    font-size: 12px;
+    font-weight: 1px;
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.boxlogin button{
+    width: 90%;
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+    font-weight: 3px;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-style: Bold;
+
+}
+
+.boxlogin hr{
+    width: 90%;
+}
+
+.boxlogin p{
+    color: var(--var-primary);
+    font-weight: 1px;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.boxlogin #Registrarlink{
+    color: #000000;
+    font-weight: 3px;
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
