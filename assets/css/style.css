@@ -73,6 +73,11 @@ header {
     border-radius: 1px;
     padding: 10px 35px 10px 35px;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-login:hover {
+    filter: brightness(0.9);
 }
 
 .btn-login a {
@@ -98,7 +103,11 @@ header {
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+    }
+
+    .logoNav.active {
+        display: none;
     }
 
     .navbar ul li {
