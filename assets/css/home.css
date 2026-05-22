@@ -1,0 +1,13 @@
+.tituloPrincipal {
+    font-size: var(--tamanho-tituloPrincipal);
+    font-weight: var(--groçura-tituloPrincipal);
+    letter-spacing: var(--espaçamento-tituloPrincipal);
+    line-height: var(--altura-linha-tituloPrincipal);
+}
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: var(--space-xl) var(--space-xl); 
+}
