@@ -5,6 +5,7 @@
     --color-secundary: #FFFFFF;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
+    --tamanho-subtitulo: 1.5rem;
     --espaçamento-tituloPrincipal: -3%;
     --groçura-tituloPrincipal: 700;
     --tamanho-subTitulo: 1.4rem;
