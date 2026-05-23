@@ -1,3 +1,11 @@
+.corPrimaria {
+    color: var(--color-primary);
+}
+
+.corSecundaria {
+    color: var(--color-secundary);
+}
+
 footer {
     display: grid;
     grid-template-columns: 20% 40% 40%;
@@ -38,6 +46,11 @@ footer .links li{
 footer .links a{
     text-decoration: none;
     color: #000000;
+}
+
+footer .links a:hover{
+    text-decoration: underline;
+    color: var(--color-primary);
 }
 
 footer .mapa{
