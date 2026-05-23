@@ -27,6 +27,7 @@
 .btnFormularioDenuncia a {
     color: var(--color-secundary);
     text-decoration: none;
+    font-size: 1rem;
 }
 .hero-section {
     display: flex;
@@ -34,7 +35,7 @@
     justify-content: center;
     padding: var(--space-xl) var(--space-xl); 
     width: 40%;
-    margin-left: 10%;
+    margin-left: 4%;
     /* border: 2px solid var(--color-primary); */
 }
 .conteiner-intro {
@@ -72,21 +73,55 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: var(--space-xl) var(--space-xl);
+    
     gap: var(--space-lg);
-    border-top: 1px solid var(--cor-borda-principal);
+    
 }
-.estatisticas{
+.estatisticasHome {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--space-xxxl);
+    
 }
 .estatisticaItem {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: var(--space-sm);
     height: 30px;
+    border: 1px solid var(--cor-borda-principal);
+    width: 100%;
+    padding: var(--space-xl) var(--space-especial-statisca) var(--space-xl) var(--space-xl);
+}
+.estatisticaItem p {
+    font-size: 0.7rem;
+    flex-direction: none;
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
+    /* border: 1px solid var(--cor-borda-principal); */
+}
+.estatisticaItem h3 {
+    font-size: var(--tamanho-subTitulo);
+    font-weight: var(--groçura-tituloPrincipal);
+    
+    /* border: 1px solid var(--cor-borda-principal); */
+}
+/* .linha-divisoria {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-borda-principal);
+    text-align: center;
+    border: 1px solid var(--cor-borda-principal);
+} */
+
+.mapa-filtro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    border: 1px solid var(--cor-borda-principal);
+    padding: var(--space-sm) var(--space-especial-mapa) var(--space-sm) var(--space-sm); 
+    margin: var(--space-xxl ) var(--space-especial-mapa) var(--space-especial-mapa) var(--space-especial-mapa);
+    background-color: #FFFFFF;
 }

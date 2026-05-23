@@ -2,11 +2,12 @@
 
 :root {
     --color-primary: #054100;
-    --color-secundary: #f5f5f5;
+    --color-secundary: #FFFFFF;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
     --espaçamento-tituloPrincipal: -3%;
     --groçura-tituloPrincipal: 700;
+    --tamanho-subTitulo: 1.4rem;
 
     /* Adicionar variáveis de tamanho de fonte do texto secundário */
     --tamanho-textoSub: 0.9rem;
@@ -20,7 +21,9 @@
     --space-lg: 24px;
     --space-xl: 50px;
     --space-xxl: 100px;
-    --space-xxxl: 300px;
+    --space-especial-statisca: 309px;
+    --space-especial-mapa: 230px;
+    
 
     /* Variáveis de altura de linha */
     --altura-linha-tituloPrincipal: 1.4;
@@ -37,7 +40,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #FDFDFE;
 }
 
 img {
