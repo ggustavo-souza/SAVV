@@ -21,73 +21,99 @@ body {
 
 .boxlogin {
     padding: 30%;
-    text-align: center;
+    margin-top: -27%; 
+    margin-bottom: -20%;
 }
 
-.boxlogin div{
-    border: 1px solid var(--color-border);
-    padding: 5%;
-    text-align: center;
+.boxlogin .forms{
+    border: 1.5px solid var(--color-border);
+    padding: 10%;
 }
 
 .boxlogin h2{
     color: var(--color-primary);
     font-size: 15px;
-    letter-spacing: 2px;
-    font-weight: 3px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: -1%;
+    text-align: center;
     
 }
 
 .boxlogin h1{
     color: #000000;
-    font-size: 15px;
-    letter-spacing: 3px;
-    font-weight: 3px;
-    font-style: bold;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 9%;
 }
 
 .boxlogin label{
     color: var(--color-information);
     font-size: 15px;
-    font-weight: 2.5px;
+    font-weight: 500;
     letter-spacing: 1px;
-    text-align: left;
+
 }
 
 .boxlogin input{
+    margin-top: 4%;
     border: 1px solid var(--color-border);
     color: var(--color-information);
-    font-size: 16px;
+    backgroung-color: transparent;
+    font-size: 12px;
     font-weight: 1px;
     letter-spacing: 1px;
     padding: 3%;
-    text-align: left;
+    width: 100%;
 }
 
 .boxlogin input[type="text"]{
     text-decoration: underline;
+    margin-bottom: 10%;
+}
+
+.boxlogin .DisplayLabel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .boxlogin #RememberSenha{
     font-size: 12px;
     font-weight: 1px;
     color: var(--color-primary);
-    text-align: left;
+    align: right;
+
 }
 
 .boxlogin button{
-    width: 90%;
+    margin-top: 10%;
+    width: 100%;
+    padding: 3%;   
+    border: 3px solid var(--color-primary);
     background-color: var(--color-primary);
     color: var(--color-secundary);
-    font-weight: 3px;
+    font-weight: 700;
     letter-spacing: 3px;
     font-size: 15px;
     font-style: Bold;
+    transition: 0.2s ease-in-out; 
+}
 
+.boxlogin button:hover{
+    padding: 3.05%; 
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: 0.3s ease-in-out; 
 }
 
 .boxlogin hr{
-    width: 90%;
+    margin-top: 10%;
+    width: 100%;
+    margin-bottom: 3%;
 }
 
 .boxlogin p{
@@ -95,10 +121,10 @@ body {
     font-weight: 1px;
     font-size: 13px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
-.boxlogin #Registrarlink{
+.boxlogin #RegistrarLink{
     color: #000000;
     font-weight: 3px;
     font-size: 13px;
