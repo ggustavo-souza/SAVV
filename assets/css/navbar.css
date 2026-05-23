@@ -87,6 +87,10 @@ header {
         gap: 1.5rem;
     }
 
+    .btn-login.active {
+        display: flex;
+    }
+
     .logoNav.active {
         display: none;
     }
