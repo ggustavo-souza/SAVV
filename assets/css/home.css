@@ -7,10 +7,38 @@
 .textoSub {
     font-size: var(--tamanho-textoSub);
     margin-top: var(--space-md);
+    line-height: var(--altura-linha-textoSub);
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
 }
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: var(--space-xl) var(--space-xl); 
+    width: 40%;
+    margin-left: 10%;
+    /* border: 2px solid var(--color-primary); */
+}
+.conteiner-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%; /* Ajuste conforme necessário */
+    /* border: 2px solid var(--color-primary); */
+}
+.img-hero {
+    width: 33%;
+    height: auto; 
+}
+
+.img-hero img {
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+
+.img-hero img:hover {
+    filter: grayscale(0%);
 }
