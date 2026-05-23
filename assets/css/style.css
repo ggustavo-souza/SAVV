@@ -19,10 +19,14 @@
     --space-md: 16px;
     --space-lg: 24px;
     --space-xl: 50px;
+    --space-xxl: 100px;
+    --space-xxxl: 300px;
 
     /* Variáveis de altura de linha */
     --altura-linha-tituloPrincipal: 1.4;
     --altura-linha-textoSub: 1.6;
+
+    --cor-borda-principal: #D9D9D9;
 }
 
 * {
