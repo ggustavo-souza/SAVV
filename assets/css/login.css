@@ -60,7 +60,6 @@ body {
     margin-top: 4%;
     border: 1px solid var(--color-border);
     color: var(--color-information);
-    backgroung-color: transparent;
     font-size: 12px;
     font-weight: 1px;
     letter-spacing: 1px;
@@ -84,7 +83,6 @@ body {
     font-size: 12px;
     font-weight: 1px;
     color: var(--color-primary);
-    align: right;
 
 }
 
