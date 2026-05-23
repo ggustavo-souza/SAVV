@@ -11,6 +11,23 @@
     font-weight: var(--groçura-textoSub);
     color: var(--color-textoSub);
 }
+.btnFormularioDenuncia {
+    background-color: var(--color-primary);
+    border: none;
+    font-weight: var(--groçura-textoSub);
+    border-radius: 1px;
+    padding: 10px 35px 10px 35px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    margin-top: var(--space-xl);
+}
+.btnFormularioDenuncia:hover {
+    filter: brightness(0.9);
+}
+.btnFormularioDenuncia a {
+    color: var(--color-secundary);
+    text-decoration: none;
+}
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -24,21 +41,52 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    height: 40%; /* Ajuste conforme necessário */
-    /* border: 2px solid var(--color-primary); */
+   
+    height: calc(100vh - 96px);
+     
+    max-width: 1350px;    
+    width: 100%;          /* Garante que ele ocupe até os 1200px em telas normais */
+    box-sizing: border-box;
+    
 }
 .img-hero {
     width: 33%;
     height: auto; 
+    
 }
 
 .img-hero img {
     object-fit: cover;
     filter: grayscale(100%);
     transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+
 }
 
 .img-hero img:hover {
     filter: grayscale(0%);
+}
+
+.conteiner-estatiticasHome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-xl) var(--space-xl);
+    gap: var(--space-lg);
+    border-top: 1px solid var(--cor-borda-principal);
+}
+.estatisticas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xxxl);
+}
+.estatisticaItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    height: 30px;
 }
