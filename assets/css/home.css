@@ -4,10 +4,13 @@
     letter-spacing: var(--espaçamento-tituloPrincipal);
     line-height: var(--altura-linha-tituloPrincipal);
 }
+.textoSub {
+    font-size: var(--tamanho-textoSub);
+    margin-top: var(--space-md);
+}
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     padding: var(--space-xl) var(--space-xl); 
 }
