@@ -7,7 +7,7 @@
     color: var(--color-secundary);
 }
 
-header {
+.headerNav {
     display: flex;
     width: 100%;
 }
