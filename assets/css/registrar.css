@@ -1,0 +1,88 @@
+.registrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.registrar .card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 650px;
+}
+
+.registrar .card-form h1 {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.registrar .card-form h3 {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.registrar .card-form h6 {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.registrar .card-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #103518;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    hover: {
+        background-color: #0e2c12;
+    }
+}
+
+.registrar .card-form button:hover {
+    background-color: #0e2c12;
+}
+
+.registrar .card-form a {
+    margin-top: 20px;
+    color: #103518;
+    text-decoration: none;
+}
+
+.registrar label {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 5px;
+    color: rgb(9, 9, 9);
+}
+
+.registrar .form-check-input {
+    margin-right: 10px;
+    display: inline-block;
+    
+}
+
+.registrar .col-half {
+    width: 40%;
+    display: block;
+}
+
+.registrar .card-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fbfbfb;
+    color: rgb(9, 9, 9)
+}

@@ -3,6 +3,7 @@
 :root {
     --color-primary: #054100;
     --color-secundary: #FFFFFF;
+    --color-tertiary: #0F172A;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
     --tamanho-subtitulo: 1.5rem;
