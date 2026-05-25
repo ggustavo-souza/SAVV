@@ -125,3 +125,21 @@
     margin: var(--space-xxl ) var(--space-especial-mapa) var(--space-especial-mapa) var(--space-especial-mapa);
     background-color: #FFFFFF;
 }
+.mapa-filtro .legendaMapa {
+    justify-content: none;
+    align-items: none;
+    
+    
+}
+.mapa-filtro .legendaMapa  p{
+    font-size: 0.8rem;
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
+    
+}
+.tipo-filtro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+}
