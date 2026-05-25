@@ -1,0 +1,70 @@
+.corPrimaria {
+    color: var(--color-primary);
+}
+
+.corSecundaria {
+    color: var(--color-secundary);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    box-shadow: 0 0 5px #2d2d2d32;
+    
+}
+
+footer .contatos{
+    padding: 3%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+footer .contatos img{
+    width: 20%;
+}
+
+footer .contatos h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+footer .linksmenu{
+    padding-top: 12%;
+    text-align: center;
+
+}
+
+footer .linksmenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+footer .linksmenu li{
+    font-size: 15px;
+    font-weight: 500;
+    list-style: none;
+    margin-left: 17%;
+    letter-spacing: 1.25px;
+    font-style: italic;
+}
+
+footer .linksmenu a{
+    text-decoration: none;
+    color: #000000;
+}
+
+footer .linksmenu a:hover{
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+footer .mapa {
+    padding: 5%;
+}
+
+footer .mapa img{
+    max-width: 60%;
+    margin-left: 20%;
+}

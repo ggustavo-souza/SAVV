@@ -2,24 +2,35 @@
 
 :root {
     --color-primary: #054100;
-    --color-secundary: #f5f5f5;
+    --color-secundary: #FFFFFF;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
+    --tamanho-subtitulo: 1.5rem;
     --espaçamento-tituloPrincipal: -3%;
     --groçura-tituloPrincipal: 700;
+    --tamanho-subTitulo: 1.4rem;
 
     /* Adicionar variáveis de tamanho de fonte do texto secundário */
     --tamanho-textoSub: 0.9rem;
-    --altura-linha-textoSub: 1.5;
+    --groçura-textoSub: 500;
+    --color-textoSub: #808080;
+    
 
     /* Variáveis de espaçamento */
     --space-sm: 8px;
     --space-md: 16px;
     --space-lg: 24px;
     --space-xl: 50px;
+    --space-xxl: 100px;
+    --space-especial-statisca: 309px;
+    --space-especial-mapa: 230px;
+    
 
     /* Variáveis de altura de linha */
     --altura-linha-tituloPrincipal: 1.4;
+    --altura-linha-textoSub: 1.6;
+
+    --cor-borda-principal: #D9D9D9;
 }
 
 * {
@@ -30,6 +41,12 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #FDFDFE;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 

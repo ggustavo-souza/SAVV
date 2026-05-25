@@ -7,10 +7,121 @@
 .textoSub {
     font-size: var(--tamanho-textoSub);
     margin-top: var(--space-md);
+    line-height: var(--altura-linha-textoSub);
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
+}
+.btnFormularioDenuncia {
+    background-color: var(--color-primary);
+    border: none;
+    font-weight: var(--groçura-textoSub);
+    border-radius: 1px;
+    padding: 10px 35px 10px 35px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    margin-top: var(--space-xl);
+}
+.btnFormularioDenuncia:hover {
+    filter: brightness(0.9);
+}
+.btnFormularioDenuncia a {
+    color: var(--color-secundary);
+    text-decoration: none;
+    font-size: 1rem;
 }
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: var(--space-xl) var(--space-xl); 
+    width: 40%;
+    margin-left: 4%;
+    /* border: 2px solid var(--color-primary); */
+}
+.conteiner-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    height: calc(100vh - 96px);
+     
+    max-width: 1350px;    
+    width: 100%;          /* Garante que ele ocupe até os 1200px em telas normais */
+    box-sizing: border-box;
+    
+}
+.img-hero {
+    width: 33%;
+    height: auto; 
+    
+}
+
+.img-hero img {
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+
+}
+
+.img-hero img:hover {
+    filter: grayscale(0%);
+}
+
+.conteiner-estatiticasHome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap: var(--space-lg);
+    
+}
+.estatisticasHome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.estatisticaItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+    border: 1px solid var(--cor-borda-principal);
+    width: 100%;
+    padding: var(--space-xl) var(--space-especial-statisca) var(--space-xl) var(--space-xl);
+}
+.estatisticaItem p {
+    font-size: 0.7rem;
+    flex-direction: none;
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
+    /* border: 1px solid var(--cor-borda-principal); */
+}
+.estatisticaItem h3 {
+    font-size: var(--tamanho-subTitulo);
+    font-weight: var(--groçura-tituloPrincipal);
+    
+    /* border: 1px solid var(--cor-borda-principal); */
+}
+/* .linha-divisoria {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-borda-principal);
+    text-align: center;
+    border: 1px solid var(--cor-borda-principal);
+} */
+
+.mapa-filtro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    border: 1px solid var(--cor-borda-principal);
+    padding: var(--space-sm) var(--space-especial-mapa) var(--space-sm) var(--space-sm); 
+    margin: var(--space-xxl ) var(--space-especial-mapa) var(--space-especial-mapa) var(--space-especial-mapa);
+    background-color: #FFFFFF;
 }

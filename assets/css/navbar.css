@@ -1,3 +1,4 @@
+
 .corPrimaria {
     color: var(--color-primary);
 }
@@ -6,7 +7,7 @@
     color: var(--color-secundary);
 }
 
-header {
+.headerNav {
     display: flex;
     width: 100%;
 }
@@ -15,7 +16,6 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: 2rem;
     box-shadow: 0 0 5px #2d2d2d32;
 }
 
@@ -85,6 +85,10 @@ header {
     .navbar ul {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .btn-login.active {
+        display: flex;
     }
 
     .logoNav.active {

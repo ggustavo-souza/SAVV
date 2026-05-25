@@ -12,39 +12,103 @@
 </head>
 
 <body>
-    <header>
+    <header class="headerNav">
         <nav class="navbar">
             <img src="../assets/images/SAVV_Logo_SemFundo.png" alt="Logo" class="logoNav">
             <ul>
                 <button class="btnMenuHamburguer"><i class="bi bi-list corPrimaria"></i></button>
-                <li><a href="./">Home</a></li>
-                <li><a href="./pages/servicos.html">Serviços</a></li>
-                <li><a href="./pages/denuncia.html">Denuncie</a></li>
-                <button class="btn-login"><a href="./pages/login.html">Login</a></button>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="denuncia.html">Denuncie</a></li>
+                <button class="btn-login"><a href="login.html">Login</a></button>
             </ul>
         </nav>
     </header>
-    <section>
-        <p class="subtitulo">NOSSA ATUAÇÃO</p>
-        <h1 class="titulo">Serviços Ambientais</h1>
+    <section class="sectionServicos">
+        <article class="articleServicos">
+            <p class="subtitulo">NOSSA ATUAÇÃO</p>
+            <h1 class="titulo">Serviços Ambientais</h1>
 
-        <p>Trabalhamos com serviços essenciais de <b>Plantio, Poda</b> e <b>Erradicação</b> de árvores para garantir a
-            segurança e a biodiversidade de Votorantim.</p>
-        <div class="contornoMapa">
-            <img src="../assets/images/foto_mapa_servicos.png" alt="Serviços Ambientais" class="imgServicos"
-                width="520px" height="300px">
-        </div>
-        <div class="legendaMapa">
-            <div>
-                <p><span class="legendaPoda"></span> Concluídos</p>
-                <input type="radio" ></input>
+            <p>Trabalhamos com serviços essenciais de <b>Plantio, Poda</b> e <b>Erradicação</b> de árvores para garantir
+                a
+                segurança e a biodiversidade de Votorantim.</p>
+        </article>
+        <aside class="asideServicos">
+            <div class="contornoMapa">
+                <img src="../assets/images/foto_mapa_servicos.png" alt="Serviços Ambientais" class="imgServicos"
+                    width="520px" height="300px">
             </div>
-            <div>
-                <p><span class="legendaPlantio"></span> Em andamento</p>
-                <input type="radio" ></input>
+            <div class="legendaMapa">
+                <div>
+                    <p><span class="legendaPoda"></span> Concluídos</p>
+                    <input type="checkbox"></input>
+                </div>
+                <div>
+                    <p><span class="legendaPlantio"></span> Em andamento</p>
+                    <input type="checkbox"></input>
+                </div>
             </div>
-        </div>
+        </aside>
     </section>
+    <main>
+        <header class="headerDados">
+            <div>
+                <h2>TRANSPARÊNCIA E DADOS</h2>
+                <span class="linha"></span>
+            </div>
+        </header>
+        <section class="sectionDados">
+            <article class="articleDados">
+                <div class="divisoriaDados">
+                    <p>PERFORMANCE SEMESTRAL</p>
+                    <div class="titulosDados">
+                        <h3>Denúncias Resolvidas (2026)</h3>
+                        <button>2026<i class="bi bi-list"></i></button>
+                    </div>
+                </div>
+                <div class="numerosDados">
+                    <div>
+                        <p>Total Resolvido</p>
+                        <h2>1482</h2>
+                    </div>
+                    <div>
+                        <p>Eficiência (Média)</p>
+                        <h2>94.2%</h2>
+                    </div>
+                    <div>
+                        <p>Tempo Médio</p>
+                        <h2>4.2 Dias</h2>
+                    </div>
+                    <div>
+                        <p>Mês de Pico</p>
+                        <h2>MAIO</h2>
+                    </div>
+                </div>
+                <div class="graficosDados">
+                    <div class="barra1"></div>
+                    <div class="barra2"></div>
+                    <div class="barra3"></div>
+                    <div class="barra4"></div>
+                    <div class="barra5"></div>
+                    <div class="barra6"></div>
+                    <div class="barra7"></div>
+                </div>
+                <div class="mesesGraficoDados">
+                    <p>JAN</p>
+                    <p>FEV</p>
+                    <p>MAR</p>
+                    <p>ABR</p>
+                    <p>MAI</p>
+                    <p>JUN</p>
+                    <p>JUL</p>
+                </div>
+            </article>
+            <aside class="asideDados">
+
+            </aside>
+        </section>
+
+    </main>
     <script src="../assets/js/script.js"></script>
 </body>
 
