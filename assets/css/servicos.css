@@ -11,7 +11,7 @@ h2 {
 }
 
 .sectionServicos {
-    margin: 3rem var(--space-xl) 0 var(--space-xl);
+    margin: 5rem var(--space-xl) 0 var(--space-xl);
     display: flex;
     flex-direction: row;
 }
@@ -101,13 +101,15 @@ h2 {
 }
 
 main {
-    margin: 4rem var(--space-xl) 0 var(--space-xl);
+    margin: 10rem var(--space-xl) 10rem var(--space-xl);
 }
 
 .headerDados {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: aparecer;
+    animation-timeline: scroll(root);
 }
 
 .headerDados div {
@@ -127,14 +129,21 @@ main {
 .sectionDados {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    animation: aparecer;
+    animation-timeline: vie;
 }
 
 .articleDados {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 2rem 1.5rem 1rem 1.5rem;
     width: 60%;
+    height: fit-content;
+        animation: aparecer;
+    animation-timeline: scroll();
 }
 
 .articleDados p {
@@ -241,9 +250,138 @@ main {
 }
 
 .asideDados {
-    border: 1px solid red;
     width: 40%;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.bordaGrafico {
+    margin-top: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.porcaoAmarela {
+    padding: 3rem;
+    background-color: #fbc02d;
+    border-radius: 5rem 0rem 0rem 0rem;
+}
+
+.porcaoVerde {
+    padding: 3rem 5rem;
+    background-color: #4caf50;
+    border-radius: 0rem 5rem 0rem 0rem;
+}
+
+.porcaoAzul {
+    padding: 4rem 9rem;
+    background-color: #f44336;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+
+.primeirosGraficos {
+    display: flex;
+    flex-direction: row;
+}
+
+.quantidadeDenuncias {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-textoSub);
+}
+
+.alinhamentoQuantidadeDenuncias {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--cor-borda-principal);
+}
+
+.quadradinhoVerde {
+    padding: 0.1rem 0.8rem 0.1rem 0.8rem;
+    background-color: #4caf50;
+    border-radius: 2px;
+}
+
+.quadradinhoAmarelo {
+    padding: 0.1rem 0.8rem 0.1rem 0.8rem;
+    background-color: #ffc107;
+    border-radius: 2px;
+}
+
+.quadradinhoVermelho {
+    padding: 0.1rem 0.8rem 0.1rem 0.8rem;
+    background-color: #f44336;
+    border-radius: 2px;
+}
+
+.dadosPlantio,
+.dadosPoda,
+.dadosErradicacao {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.quadradoCategoria {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
+}
+
+.chamadaDenuncia {
+    margin: 4rem var(--space-xl) 0 var(--space-xl);
+    padding: 2rem;
+    display: flex;
+    background-color: var(--color-tertiary);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chamadaDenuncia h1 {
+    color: var(--color-secundary);
+    font-size: var(--tamanho-tituloPrincipal);
+    font-weight: 700;
+}
+
+.chamadaDenuncia button {
+    background-color: var(--color-secundary);
+    color: var(--color-tertiary);
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.7rem;
+    transition: all 0.3s ease, color 0.3s ease;
+}
+
+.chamadaDenuncia button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+    transform: scale(1.05);
+    transition: all 0.3s ease, color 0.3s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
