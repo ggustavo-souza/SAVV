@@ -112,6 +112,7 @@ main {
 
 .headerDados.animar {
     animation: aparecer 1s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-timeline: view();
 }
 
 .headerDados div {
