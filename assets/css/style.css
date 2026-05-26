@@ -6,10 +6,11 @@
     --color-tertiary: #0F172A;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
-    --tamanho-subtitulo: 1.5rem;
+    --tamanho-subtitulo: 2rem;
     --espaçamento-tituloPrincipal: -3%;
     --groçura-tituloPrincipal: 700;
-    --tamanho-subTitulo: 1.4rem;
+    --tamanho-tituloTerciario: 1.5rem;
+    
 
     /* Adicionar variáveis de tamanho de fonte do texto secundário */
     --tamanho-textoSub: 0.9rem;
@@ -51,3 +52,9 @@ img {
   display: block;
 }
 
+.tituloPrincipal {
+    font-size: var(--tamanho-tituloPrincipal);
+    font-weight: var(--groçura-tituloPrincipal);
+    letter-spacing: var(--espaçamento-tituloPrincipal);
+    line-height: var(--altura-linha-tituloPrincipal);
+}

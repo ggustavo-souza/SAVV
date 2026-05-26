@@ -1,8 +1,13 @@
 @import url('./style.css');
 
 h2 {
-    font-size: var(--tamanho-subtitulo);
+    font-size: var(--tamanho-tituloTerciario);
     font-weight: 700;
+}
+
+h3 {
+    font-size: var(--tamanho-tituloTerciario);
+    font-weight: var(--groçura-tituloPrincipal);
 }
 
 .contornoMapa {
@@ -88,17 +93,13 @@ h2 {
     accent-color: var(--color-primary);
 }
 
-.subtitulo {
+.subtituloVerde {
     font-size: 0.7rem;
     font-weight: 600;
     color: var(--color-primary);
 }
 
-.titulo {
-    font-size: var(--tamanho-tituloPrincipal);
-    font-weight: 700;
-    margin-bottom: 20px;
-}
+
 
 main {
     margin: 10rem var(--space-xl) 10rem var(--space-xl);
@@ -287,6 +288,10 @@ main {
     font-size: 0.7rem;
     font-weight: 600;
     color: var(--color-textoSub);
+}
+.numerosdados h2 {
+    font-size: var(--tituloTerciario);
+    
 }
 
 .asideDados {
