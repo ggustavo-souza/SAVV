@@ -113,6 +113,7 @@ main {
 
 .headerDados.animar {
     animation: aparecer 1s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-timeline: view();
 }
 
 .headerDados div {
@@ -387,7 +388,7 @@ main {
 }
 
 .chamadaDenuncia {
-    margin: 4rem var(--space-xl) 0 var(--space-xl);
+    margin: 4rem 0 4rem 0;
     padding: 2rem;
     display: flex;
     background-color: var(--color-tertiary);
@@ -436,5 +437,54 @@ main {
     }
     to {
         height: var(--bar-height);
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionServicos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sectionServicos article,
+    .sectionServicos aside {
+        width: 100%;
+    }
+
+    .asideServicos {
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .legendaMapa {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .imgServicos {
+        width: 100%;
+        height: auto;
+    }
+
+    .asideServicos .contornoMapa {
+        padding: 0;
+    }
+
+    .sectionDados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .articleDados,
+    .asideDados {
+        width: 100%;
+    }
+
+    .chamadaDenuncia {
+        width: 100%;
+    }
+
+    .chamadaDenuncia h1 {
+        font-size: 1rem;
     }
 }
