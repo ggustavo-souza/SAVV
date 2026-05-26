@@ -108,8 +108,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: aparecer;
-    animation-timeline: view();
+}
+
+.headerDados.animar {
+    animation: aparecer 1s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
 
 .headerDados div {
@@ -178,43 +180,85 @@ main {
 .barra1 {
     width: 15px;
     height: 70px;
+    --bar-height: 70px;
     background-color: var(--cor-borda-principal);
 }
 
 .barra2 {
     width: 15px;
     height: 110px;
+    --bar-height: 110px;
     background-color: var(--cor-borda-principal);
 }
 
 .barra3 {
     width: 15px;
     height: 60px;
+    --bar-height: 60px;
     background-color: var(--cor-borda-principal);
 }
 
 .barra4 {
     width: 15px;
     height: 150px;
+    --bar-height: 150px;
     background-color: var(--color-primary);
 }
 
 .barra5 {
     width: 15px;
     height: 70px;
+    --bar-height: 70px;
     background-color: var(--cor-borda-principal);
 }
 
 .barra6 {
     width: 15px;
     height: 70px;
+    --bar-height: 70px;
     background-color: var(--cor-borda-principal);
 }
 
 .barra7 {
     width: 15px;
     height: 100px;
+    --bar-height: 100px;
     background-color: var(--cor-borda-principal);
+}
+
+.graficosDados.animar .barra1 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0s;
+}
+
+.graficosDados.animar .barra2 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.1s;
+}
+
+.graficosDados.animar .barra3 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.2s;
+}
+
+.graficosDados.animar .barra4 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.3s;
+}
+
+.graficosDados.animar .barra5 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.4s;
+}
+
+.graficosDados.animar .barra6 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.5s;
+}
+
+.graficosDados.animar .barra7 {
+    animation: aumentarBarras 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.6s;
 }
 
 .graficosDados {
@@ -375,9 +419,17 @@ main {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes aumentarBarras {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--bar-height);
     }
 }
