@@ -58,3 +58,10 @@ img {
     letter-spacing: var(--espaçamento-tituloPrincipal);
     line-height: var(--altura-linha-tituloPrincipal);
 }
+.textoSub {
+    font-size: var(--tamanho-textoSub);
+    margin-top: var(--space-md);
+    line-height: var(--altura-linha-textoSub);
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
+}

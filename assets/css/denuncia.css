@@ -1,9 +1,9 @@
 
 .tituloPrincipalDenuncia {
-    font-size: var(--tamanho-subtitulo);
+    font-size: var(--tamanho-tituloPrincipal);
     font-weight: var(--groçura-tituloPrincipal);
     color: var(--cor-texto-principal);
-    margin-bottom: var(--space-lg);
+    letter-spacing: var(--espaçamento-tituloPrincipal);
     
 }
 .containerDenuncia {
@@ -11,11 +11,73 @@
     flex-direction: column;
     
    
-    padding: var(--space-especial-mapa) var(--space-especial-mapa);
+    padding: 110px var(--space-especial-mapa);
+    padding-bottom: var(--space-xl);
    
 }
 .subtituloVerde {
     font-size: 0.7rem;
     font-weight: 600;
     color: var(--color-primary);
+}
+.linhaDivisoria {
+    background-color: var(--cor-borda-principal);  
+}
+
+.containerFormularioDenuncia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-lg);
+    margin: var(--space-xl) var(--space-xxl) var(--space-especial-mapa) var(--space-xxl);
+    
+    border-top: 1px solid var(--cor-borda-principal);
+}
+.formDenuncia {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    
+    padding: var(--space-xl) 135px var(--space-xl) 135px;
+    
+}
+.denunciaItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    
+    width: 100%;
+    
+}
+.denunciaItem2 {
+    display: flex;
+    flex-direction: row;
+    
+    gap: var(--space-xl);
+    width: 100%;
+    
+    
+}
+.inputDenuncia{
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--cor-borda-principal);
+    height: 45px;
+    
+}
+.labelDenuncia {
+    
+    font-weight: 600;
+     font-size: var(--tamanho-textoSub);
+    
+    line-height: var(--altura-linha-textoSub);
+    
+    color: var(--color-textoSub);
+}
+.inputDenuncia1{
+    
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--cor-borda-principal);
 }
