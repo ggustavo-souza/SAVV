@@ -1,0 +1,21 @@
+
+.tituloPrincipalDenuncia {
+    font-size: var(--tamanho-subtitulo);
+    font-weight: var(--groçura-tituloPrincipal);
+    color: var(--cor-texto-principal);
+    margin-bottom: var(--space-lg);
+    
+}
+.containerDenuncia {
+    display: flex;
+    flex-direction: column;
+    
+   
+    padding: var(--space-especial-mapa) var(--space-especial-mapa);
+   
+}
+.subtituloVerde {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}

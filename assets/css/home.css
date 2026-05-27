@@ -100,7 +100,7 @@
     /* border: 1px solid var(--cor-borda-principal); */
 }
 .estatisticaItem h3 {
-    font-size: var(--tamanho-subTitulo);
+    font-size: var(--tamanho-tituloTerciario);
     font-weight: var(--groçura-tituloPrincipal);
     
     /* border: 1px solid var(--cor-borda-principal); */
@@ -117,7 +117,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    
     gap: var(--space-lg);
     margin-top: var(--space-xl);
     border: 1px solid var(--cor-borda-principal);
@@ -128,7 +128,7 @@
 .mapa-filtro .legendaMapa {
     justify-content: none;
     align-items: none;
-    
+    align-items: center;
     
 }
 .mapa-filtro .legendaMapa  p{
