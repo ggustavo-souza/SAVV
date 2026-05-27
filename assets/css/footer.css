@@ -1,4 +1,4 @@
-.corPrimaria {
+corPrimaria {
     color: var(--color-primary);
 }
 
@@ -24,7 +24,7 @@ footer .contatos img{
 }
 
 footer .contatos h1{
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -42,7 +42,7 @@ footer .linksmenu ul {
 }
 
 footer .linksmenu li{
-    font-size: 1em;
+    font-size: 15px;
     font-weight: 500;
     list-style: none;
     margin-left: 17%;
@@ -67,4 +67,20 @@ footer .mapa {
 footer .mapa img{
     max-width: 60%;
     margin-left: 20%;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .linksmenu ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
 }
