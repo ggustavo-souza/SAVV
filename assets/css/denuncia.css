@@ -81,3 +81,10 @@
     padding: var(--space-sm);
     border: 1px solid var(--cor-borda-principal);
 }
+.inputDenunciaAnexo {
+   
+    width: 100%;
+    border: 1px solid var(--cor-borda-principal);
+    height: 200px;
+    
+}
