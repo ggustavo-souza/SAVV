@@ -32,23 +32,22 @@ footer .contatos h1{
 footer .linksmenu{
     padding-top: 12%;
     text-align: center;
-
 }
 
 footer .linksmenu ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 
 footer .linksmenu li{
     font-size: 1em;
     font-weight: 500;
     list-style: none;
-    margin-left: 17%;
+    margin-left: 20%;
     letter-spacing: 1.25px;
-    font-style: italic;
+    z-index: 1;
 }
 
 footer .linksmenu a{
@@ -63,9 +62,11 @@ footer .linksmenu a:hover{
 
 footer .mapa {
     padding: 5%;
+    display: flex;
+    justify-content: end;
+    width: 100%;
 }
 
 footer .mapa img{
     max-width: 60%;
-    margin-left: 20%;
 }
