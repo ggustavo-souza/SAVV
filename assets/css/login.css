@@ -62,7 +62,6 @@ body {
 .boxlogin input{
     margin-top: 4%;
     border: 1px solid var(--color-border);
-    color: var(--color-information);
     font-size: var(--tamanho-textoSub);
     font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
@@ -70,8 +69,12 @@ body {
     width: 100%;
 }
 
+.boxlogin input:focus{
+    border: 1px solid var(--color-information);
+    outline: 2.5px solid var(--color-information);
+}
+
 .boxlogin input[type="text"]{
-    text-decoration: underline;
     margin-bottom: 10%;
 }
 
