@@ -131,3 +131,10 @@ body {
     letter-spacing: 2px;
 }
 
+@media (max-width: 768px) {
+    .boxlogin {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
