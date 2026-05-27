@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('style.css');
 
 :root {
     --color-primary: #054100;
@@ -22,18 +23,21 @@ body {
 .boxlogin {
     padding-left: 25%;
     padding-right: 25%;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .boxlogin .forms{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10%;
+    margin: 15% 0 15% 0;
 }
 
 .boxlogin h2{
     color: var(--color-primary);
-    font-size: 15px;
+    font-size: var(--tamanho-textosub);
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: var(--groçura-textoSub);
     margin-bottom: -1%;
     text-align: center;
     
@@ -41,16 +45,16 @@ body {
 
 .boxlogin h1{
     color: #000000;
-    font-size: 35px;
-    font-weight: 700;
+    font-size: var(--tamanho-tituloPrincipal);
+    font-weight: var(--groçura-tituloPrincipal);
     text-align: center;
     margin-bottom: 9%;
 }
 
 .boxlogin label{
     color: var(--color-information);
-    font-size: 15px;
-    font-weight: 500;
+    font-size: var(--tamanho-textoSub);
+    font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
 
 }
@@ -58,16 +62,19 @@ body {
 .boxlogin input{
     margin-top: 4%;
     border: 1px solid var(--color-border);
-    color: var(--color-information);
-    font-size: 12px;
-    font-weight: 1px;
+    font-size: var(--tamanho-textoSub);
+    font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
     padding: 3%;
     width: 100%;
 }
 
+.boxlogin input:focus{
+    border: 1px solid var(--color-information);
+    outline: 2.5px solid var(--color-information);
+}
+
 .boxlogin input[type="text"]{
-    text-decoration: underline;
     margin-bottom: 10%;
 }
 
@@ -79,8 +86,8 @@ body {
 }
 
 .boxlogin #RememberSenha{
-    font-size: 12px;
-    font-weight: 1px;
+    font-size: var(--tamanho-textoSub);
+    font-weight: var(--groçura-textoSub);
     color: var(--color-primary);
 
 }
@@ -92,10 +99,10 @@ body {
     border: 3px solid var(--color-primary);
     background-color: var(--color-primary);
     color: var(--color-secundary);
-    font-weight: 700;
+    font-weight: var(--groçura-textoSub);
     letter-spacing: 3px;
-    font-size: 15px;
-    font-style: Bold;
+    font-size: var(--tamanho-textoSub);
+    font-style: bold;
     transition: 0.2s ease-in-out; 
 }
 
@@ -114,17 +121,23 @@ body {
 
 .boxlogin p{
     color: var(--var-primary);
-    font-weight: 1px;
-    font-size: 13px;
+    font-weight: var(--groçura-textoSub);
+    font-size: var(--tamanho-textoSub);
     text-align: center;
     letter-spacing: 1.5px;
 }
 
 .boxlogin #RegistrarLink{
     color: #000000;
-    font-weight: 3px;
-    font-size: 13px;
-
+    font-weight: var(--groçura-textoSub);
+    font-size: var(--tamanho-textoSub);
     letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .boxlogin {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
 

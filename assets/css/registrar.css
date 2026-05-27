@@ -16,6 +16,7 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 650px;
+    margin: 10% 0 10% 0;
 }
 
 .registrar .card-form h1 {
@@ -44,9 +45,6 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    hover: {
-        background-color: #0e2c12;
-    }
 }
 
 .registrar .card-form button:hover {

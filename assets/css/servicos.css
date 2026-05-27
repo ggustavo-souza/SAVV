@@ -487,4 +487,28 @@ main {
     .chamadaDenuncia h1 {
         font-size: 1rem;
     }
+
+    .headerDados {
+        text-align: center;
+    }
+}
+
+.escondido {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mostrar {
+    animation: aparecer 1s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
