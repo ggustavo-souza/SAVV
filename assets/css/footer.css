@@ -11,15 +11,17 @@ footer {
     grid-template-columns: 25% 35% 40%;
     box-shadow: 0 0 5px #2d2d2d32;
     padding-right: 1%;
-    padding-left: 1%;
+    padding-right: 1%;
 }
 
 footer .contatos{
+    display: flex;
     flex-wrap: wrap;         
     justify-content: center; 
     gap: 5px;
     align-items: center;
     padding: 3em;
+    text-align: center;
 }
 
 footer .contatos img{
@@ -35,13 +37,10 @@ footer .contatos h1{
 footer .linksmenu{
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
 footer .linksmenu ul {
     display: flex;
-    
-    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -93,7 +92,7 @@ footer .mapa img{
         justify-content: left;
         align-items: left;
         width: 80%;
-        margin-top: 1.0em;
+        margin-top: -2em;
     }
 
     footer .linksmenu li {
