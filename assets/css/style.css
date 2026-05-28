@@ -2,7 +2,7 @@
 
 :root {
     --color-primary: #054100;
-    --color-secundary: #f5f5f5;
+    --color-secundary: #fdfdfd;
     --color-tertiary: #0F172A;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
@@ -14,6 +14,7 @@
 
     /* Adicionar variáveis de tamanho de fonte do texto secundário */
     --tamanho-textoSub: 0.9rem;
+    --tamanho-textoSub-mobile: 0.8rem;
     --groçura-textoSub: 500;
     --color-textoSub: #808080;
     
@@ -57,4 +58,11 @@ img {
     font-weight: var(--groçura-tituloPrincipal);
     letter-spacing: var(--espaçamento-tituloPrincipal);
     line-height: var(--altura-linha-tituloPrincipal);
+}
+.textoSub {
+    font-size: var(--tamanho-textoSub);
+    margin-top: var(--space-md);
+    line-height: var(--altura-linha-textoSub);
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-textoSub);
 }
