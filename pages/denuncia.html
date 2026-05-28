@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/denuncia.css">
-     
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <title>Document</title>
+    <title>SAVV Votorantim - Denuncie</title>
 </head>
 <body>
     <header class="headerNav">
@@ -27,8 +29,51 @@
 
         <div class="containerDenuncia">
             <span class="subtituloVerde">DENÚNCIA</span>
-            <span class="tituloPrincipalDenuncia">DENÚNCIA</span>
+            <span class="tituloPrincipalDenuncia">Nova Ocorrência</span>
+            <p class="textoSub">Relate problemas ambientais em Votorantim.</p>
+            
+            
+        </div>
+        
+        <div class="containerFormularioDenuncia">
+            
+            <form class="formDenuncia">
+                <div class="denunciaItem">
+                <label class="labelDenuncia" for="nome">tipo do serviço</label>
+                <input class="inputDenuncia" type="text" id="nome" name="nome" required>
+                </div>
+                <div class="denunciaItem">
+                <label class="labelDenuncia" for="email">relato da ocorrência</label>
+                <textarea class="inputDenuncia1" id="descricao" name="descricao" rows="5" required></textarea>
+                </div>
+
+                <div class="denunciaItem2">
+                    <div class="denunciaItem">
+                        <label class="labelDenuncia" for="telefone">CEP</label>
+                        <input class="inputDenuncia" type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="denunciaItem">
+                        <label class="labelDenuncia" for="endereco">bairro</label>
+                        <input class="inputDenuncia" type="text" id="endereco" name="endereco" required>
+                    </div>
+                </div>
+
+                <div class="denunciaItem">
+                <label class="labelDenuncia" for="telefone">endereço</label>
+                <input class="inputDenuncia" type="tel" id="telefone" name="telefone" required>
+                </div>
+
+                <div class="denunciaItem">
+                    <label class="labelDenuncia" for="foto">evidência fotografica</label>
+                    <input class="inputDenunciaAnexo" type="file" id="foto" name="foto" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btnEnviarDenuncia">Enviar Denúncia</button>
+
+                
+            </form>
         </div>
     </section>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
