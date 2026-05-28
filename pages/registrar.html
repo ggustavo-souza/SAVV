@@ -34,41 +34,36 @@
 
                 <h6>Junte-se à gestão ambiental de Votorantim </h6>
 
-                <label class="form-label"> NOME DO CIDADÃO: </label>
-                <br>
-                <input type="text" placeholder="Ex: João da Silva" required>
-                <br>
+                <form>
+                    <div class="form-label">
+                        <label> NOME DO CIDADÃO: </label>
+                        <input type="text" placeholder="Ex: João da Silva" required>
+                    </div>
 
-                <label class="form-label"> ENDEREÇO DE EMAIL: </label>
-                <br>
+                <div class="form-label">
+                <label> ENDEREÇO DE EMAIL: </label>
                 <input type="email" placeholder="Ex: nome@exemplo.com" required>
-                <br>
+                </div>
 
                 <div class="row">
-                    <div class="col-6">
-                        <label class="form-label"> SENHA: </label>
-                        <div class="col-6">
-                            <label class="form-label"> CONFIRMAR SENHA: </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
+                    <div class="form-label">
+                        <label> SENHA: </label>
                         <input type="password" placeholder="********" required>
-                        <div class="col-6">
-                            <input type="password" placeholder="********" required>
-                        </div>
+                    </div>
+                    <div class="form-label">
+                        <label> CONFIRMAR SENHA: </label>
+                        <input type="password" placeholder="********" required>
                     </div>
                 </div>
-                <br>
 
-                <input class="form-check-input" type="checkbox" id="termos" required>
-                <label for="termos"> Aceito os <a href="#">termos de utilização</a> e a política de privacidade dos
-                    dados.</label>
-                <br>
+                <div class="form-check">
+                <input type="checkbox" id="termos" required>
+                <label for="termos"> Aceito os <a href="#">termos de utilização</a> e a política de privacidade dos dados.</label>
+                </div>
                 <button class="btnRegistrar">Registrar</button>
 
             </div>
+        </form>
         </section>
     </main>
 </body>
