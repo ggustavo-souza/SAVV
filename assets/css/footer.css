@@ -43,6 +43,7 @@ footer .linksmenu ul {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-right: 5em;
 }
 
 footer .linksmenu li{
@@ -84,15 +85,17 @@ footer .mapa img{
     footer .linksmenu  {
         text-align: left;
         padding-top: 0%;
+        align-items: center;
     }
 
     footer .linksmenu ul {
         display: grid;
         grid-template-columns: 50% 50%;
+        grid-template-rows: 3em 3em;
         justify-content: left;
         align-items: left;
         width: 80%;
-        margin-top: -2em;
+        margin-right: 0em;
     }
 
     footer .linksmenu li {
