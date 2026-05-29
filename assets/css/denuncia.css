@@ -88,3 +88,44 @@
     height: 200px;
     
 }
+.btnEnviarDenuncia {
+    
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--tamanho-textoSub);
+    font-weight: var(--groçura-textoSub);
+    padding: var(--space-sm) var(--space-lg);
+    border: 3px solid var(--color-primary);
+    
+    margin-left: 150px;
+    margin-right: 150px;
+    transition: 0.2s ease-in-out;
+    margin-top: var(--space-md);
+}
+.btnEnviarDenuncia:hover{
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: 0.3s ease-in-out; 
+}
+textarea {
+    resize: vertical;
+}
+.imgMapaDenuncia {
+    width: 100%;
+    height: 1%;
+}
+.container-imagem {
+  width: 100%;  
+  height: 330px;
+  overflow: hidden; 
+}
+
+.container-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+}
