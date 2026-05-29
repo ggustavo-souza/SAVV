@@ -57,13 +57,32 @@
     transition: all 0.3s ease-out;
 }
 
-.btn-login:hover {
+.btn-login:hover, .btn-login-minhaConta:hover {
     filter: brightness(0.9);
 }
 
 .btn-login a {
     color: var(--color-secundary);
     text-decoration: none;
+}
+
+.btn-login-minhaConta a {
+    color: var(--color-primary);
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-login-minhaConta {
+    border: 2px solid var(--cor-borda-principal);
+    font-weight: 600;
+    border-radius: 1px;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    display: flex;
+    transition: all 0.3s ease-out;
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
 }
 
 .logoNav {
@@ -91,6 +110,10 @@
         display: flex;
     }
 
+    .btn-login-minhaConta.active {
+        display: flex;
+    }
+
     .logoNav.active {
         display: none;
     }
@@ -100,6 +123,10 @@
     }
 
     .btn-login {
+        display: none;
+    }
+
+    .btn-login-minhaConta {
         display: none;
     }
 

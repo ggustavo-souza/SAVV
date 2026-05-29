@@ -1,0 +1,72 @@
+@import url('style.css');
+
+button i {
+    font-size: 1.5rem;
+    color: var(--cor-primary);
+}
+
+.informacoesUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.informacoesUsuario h2 {
+    font-size: var(--tamanho-subtitulo);
+    font-weight: 600;
+}
+
+.informacoesUsuario p {
+    font-size: var(--tamanho-textoSub);
+    color: var(--color-textoSub);
+    font-weight: var(--groçura-textoSub);
+    line-height: var(--altura-linha-textoSub);
+}
+
+.opcoesConta {
+    margin: 3rem 5rem 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.imagemUsuario {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--cor-borda-principal);
+    border-radius: 0.3rem;
+}
+
+.imagemUsuario img {
+    width: 100%;
+    height: 100%;
+}
+
+.config {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: start;
+}
+
+.btn-config {
+    background-color: var(--color-tertiary);
+    color: var(--color-secundary);
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
