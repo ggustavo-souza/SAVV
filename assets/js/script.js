@@ -1,15 +1,23 @@
 const menu = document.querySelector('.btnMenuHamburguer');
 const logo = document.querySelector('.logoNav');
+console.log(logo)
 const elementosAnimar = document.querySelectorAll('.escondido');
+const btnLogin = document.querySelector('.btn-login');
+const btnLoginMinhaConta = document.querySelector('.btn-login-minhaConta');
+
+function toggleMenu() {
+    if(btnLoginMinhaConta !== null) {btnLoginMinhaConta.classList.toggle('active');}
+    if(btnLogin !== null) {btnLogin.classList.toggle('active');}
+    if(logo !== null) {logo.classList.toggle('active');}
+}
 
 menu.addEventListener('click', () => {
     const navLi = document.querySelectorAll('.navbar ul li');
-    const btnLogin = document.querySelector('.btn-login');
     navLi.forEach((li) => {
         li.classList.toggle('active');
     });
-    logo.classList.toggle('active');
-    btnLogin.classList.toggle('active');
+    toggleMenu();
+
 });
 
 const observerOptions = {
