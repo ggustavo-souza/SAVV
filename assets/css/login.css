@@ -58,7 +58,7 @@ body {
 
 .boxlogin label {
     color: var(--color-information);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
 }
@@ -67,7 +67,7 @@ body {
 .boxlogin input {
     margin-top: 6px;                  
     border: 1px solid var(--color-border);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
     padding: 10px 12px;                
@@ -108,7 +108,7 @@ body {
     color: var(--color-secundary);
     font-weight: var(--groçura-textoSub);
     letter-spacing: 3px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-style: bold;
     transition: 0.2s ease-in-out; 
 }
@@ -130,7 +130,7 @@ body {
 .boxlogin p {
     color: var(--color-primary); 
     font-weight: var(--groçura-textoSub);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-align: center;
     letter-spacing: 1.5px;
 }
@@ -138,9 +138,10 @@ body {
 .boxlogin #RegistrarLink {
     color: #000000;
     font-weight: var(--groçura-textoSub);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 2px;
 }
+
 
 
 @media (max-width: 768px) {
