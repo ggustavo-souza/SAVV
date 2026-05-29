@@ -8,41 +8,46 @@ corPrimaria {
 
 footer {
     display: grid;
-    grid-template-columns: 20% 40% 40%;
+    grid-template-columns: 25% 35% 40%;
     box-shadow: 0 0 5px #2d2d2d32;
-    padding-left: 1%;
+    padding-right: 1%;
     padding-right: 1%;
 }
 
 footer .contatos{
-    padding: 3%;
-    padding-top: 5%;
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center; 
+    gap: 5px;
+    align-items: center;
+    padding: 3em;
     text-align: center;
 }
 
 footer .contatos img{
-    width: 40%;
+    max-width: 5em;
 }
 
 footer .contatos h1{
-    font-size: 1.3rem;
+    font-size: 1.3em;
     font-weight: 600;
+    flex: 1 1 20em;
 }
 
 footer .linksmenu{
-    padding-top: 12%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 footer .linksmenu ul {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
+    margin-right: 5em;
 }
 
 footer .linksmenu li{
-    font-size: 15px;
+    font-size: 1em;
     font-weight: 500;
     list-style: none;
     margin-left: 20%;
@@ -71,18 +76,60 @@ footer .mapa img{
     max-width: 60%;
 }
 
-@media (max-width: 768px) {
-    footer {
-        display: flex;
-        flex-direction: column;
+@media (max-width: 900px) {
+    footer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    footer .linksmenu  {
+        text-align: left;
+        padding-top: 0%;
+        align-items: center;
     }
 
     footer .linksmenu ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 3em 3em;
+        justify-content: left;
+        align-items: left;
+        width: 80%;
+        margin-right: 0em;
+    }
+
+    footer .linksmenu li {
+        font-size: 0.9em;
+        
+    }
+
+    footer .contatos {
+        padding-top: 2em;
+    }
+
+    footer .contatos img {
+        width: 4em;
+    }
+
+    footer .contatos h1 {
+        font-size: 1em;
+    }
+
+    footer .mapa {
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        grid-column: span 2;
+        grid-row: 1;
+
+    }
+
+    footer .mapa img{
+        max-width: 17em;
+
+    }
+
+
+
 }

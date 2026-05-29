@@ -14,6 +14,7 @@
 
     /* Adicionar variáveis de tamanho de fonte do texto secundário */
     --tamanho-textoSub: 0.9rem;
+    --tamanho-textoSub-mobile: 0.8rem;
     --groçura-textoSub: 500;
     --color-textoSub: #808080;
     
