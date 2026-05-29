@@ -73,7 +73,7 @@
 }
 
 .btn-login-minhaConta {
-    border: 2px solid var(--cor-borda-principal);
+    border: 1px solid var(--cor-borda-principal);
     font-weight: 600;
     border-radius: 1px;
     padding: 10px 25px 10px 25px;
