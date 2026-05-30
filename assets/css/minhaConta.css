@@ -71,3 +71,134 @@ button i {
     align-items: center;
     gap: 0.5rem;
 }
+
+.ocorrenciasUsuario {
+    padding: 1rem 4rem 0rem 4rem;
+}
+
+.tituloFiltros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor-borda-principal);
+    padding-bottom: 0.5rem;
+}
+
+.tituloFiltros p {
+    font-size: var(--tamanho-textoSub);
+    font-weight: 600;
+    color: var(--color-textoSub);
+}
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    color: var(--color-textoSub);
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-filtro-ativo {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    color: var(--color-tertiary);
+    border-bottom: 2px solid var(--color-tertiary);
+}
+
+.iconeRelogio {
+    font-size: 1.2rem;
+    color: var(--color-textoSub);
+    background-color: var(--cor-borda-principal);
+    width: fit-content;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    margin-right: 2rem;
+}
+
+.id, .tipo, .status {
+    font-size: var(--tamanho-textoSub-mobile);
+    width: fit-content;
+    font-weight: var(--groçura-textoSub);
+    border-radius: 2px;
+    padding: 0.3rem;
+}
+
+.id, .tipo, .status, p {
+    align-self: center;
+}
+
+.id {
+    background-color: var(--cor-borda-principal);
+    border: 1.5px solid #545454;
+}
+
+.tipo {
+    background-color: var(--color-success);
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.status {
+    background-color: var(--color-warning);
+    border: 1.5px solid #9f7905;
+    color: #5c4607;
+}
+
+.tempo {
+    align-self: center;
+    color: var(--color-textoSub);
+    font-weight: var(--groçura-tituloPrincipal);
+    font-size: var(--tamanho-textoSub);
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.baloes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.elementosPrincipais {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ocorrencia {
+    border: 1px solid red;
+}
+
+.textoOcorrencia {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 3rem 2rem 3.2rem;
+}
+
+.texto {
+    margin: 0rem 0rem 0rem 3rem;
+}
+
+.barraLateral {
+    padding: 1px;
+    background-color: var(--cor-borda-principal);
+    height: 100px;
+}
