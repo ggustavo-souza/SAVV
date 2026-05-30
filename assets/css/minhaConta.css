@@ -80,6 +80,8 @@ button i {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid var(--cor-borda-principal);
+    padding-bottom: 0.5rem;
 }
 
 .tituloFiltros p {
@@ -100,7 +102,7 @@ button i {
     border: none;
     font-weight: 600;
     border-radius: 3px;
-    padding: 10px 25px 10px 25px;
+    padding: 5px 25px 5px 25px;
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
@@ -110,7 +112,7 @@ button i {
     border: none;
     font-weight: 600;
     border-radius: 3px;
-    padding: 10px 25px 10px 25px;
+    padding: 5px 25px 5px 25px;
     cursor: pointer;
     transition: all 0.3s ease-out;
     color: var(--color-tertiary);
