@@ -1,0 +1,10 @@
+@import url('./style.css');
+
+.boxInfos {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 10%;
+}
+
+
+
