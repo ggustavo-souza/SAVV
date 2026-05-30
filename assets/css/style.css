@@ -4,6 +4,9 @@
     --color-primary: #054100;
     --color-secundary: #fdfdfd;
     --color-tertiary: #0F172A;
+    --color-success: #8cd29c;
+    --color-error: #dc3545;
+    --color-warning: #ffc107;
     /* Adicionar variáveis de tamanho de fonte do título principal */
     --tamanho-tituloPrincipal: 3rem;
     --tamanho-subtitulo: 2rem;
