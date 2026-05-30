@@ -118,3 +118,11 @@ button i {
     color: var(--color-tertiary);
     border-bottom: 2px solid var(--color-tertiary);
 }
+
+.iconeRelogio {
+    font-size: 1.2rem;
+    color: var(--color-textoSub);
+    background-color: var(--cor-borda-principal);
+    width: fit-content;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
