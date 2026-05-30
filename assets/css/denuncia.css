@@ -8,7 +8,6 @@
 .containerDenuncia {
     display: flex;
     flex-direction: column;
-    /* MEIO-TERMO: 55px (nem os 110px originais, nem os 45px do anterior) */
     padding: 55px var(--space-especial-mapa) var(--space-xl) var(--space-especial-mapa);
 }
 
@@ -34,9 +33,9 @@
 .formDenuncia {
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg); /* Voltou para o espaçamento original para dar mais respiro */
+    gap: var(--space-lg); 
     
-    /* MEIO-TERMO: 720px é o equilíbrio perfeito entre o formato largo e o compacto */
+   
     max-width: 720px; 
     width: 100%;
     margin: 0 auto;
@@ -47,7 +46,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-sm); /* Voltou para o espaçamento original do label */
+    gap: var(--space-sm);
     width: 100%;
 }
 
@@ -62,7 +61,7 @@
     width: 100%;
     padding: var(--space-sm);
     border: 1px solid var(--cor-borda-principal);
-    height: 44px; /* MEIO-TERMO: Altura confortável para digitação */
+    height: 44px; 
 }
 
 .labelDenuncia {
@@ -81,7 +80,7 @@
 .inputDenunciaAnexo {
     width: 100%;
     border: 1px solid var(--cor-borda-principal);
-    height: 140px; /* MEIO-TERMO: Nem os 200px exagerados, nem os 100px apertados */
+    height: 140px; 
 }
 
 .btnEnviarDenuncia {
@@ -97,7 +96,7 @@
     transition: 0.2s ease-in-out;
     
     width: 100%;
-    max-width: 270px; /* MEIO-TERMO: Botão centralizado com tamanho firme */
+    max-width: 270px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -118,10 +117,10 @@ textarea {
     height: 1%;
 }
 
-/* Função estilo Figma no tamanho ideal para exibição */
+
 .container-imagem {
     width: 100%;  
-    height: 260px; /* MEIO-TERMO: Mostra bem o mapa sem engolir a tela inteira */
+    height: 260px; 
     overflow: hidden; 
     margin: 10px 0;
 }
