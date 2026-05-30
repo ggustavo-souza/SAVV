@@ -70,3 +70,49 @@ button i {
     align-items: center;
     gap: 0.5rem;
 }
+
+.ocorrenciasUsuario {
+    padding: 1rem 4rem 0rem 4rem;
+}
+
+.tituloFiltros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloFiltros p {
+    font-size: var(--tamanho-textoSub);
+    font-weight: 600;
+    color: var(--color-textoSub);
+}
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    color: var(--color-textoSub);
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-filtro-ativo {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    color: var(--color-tertiary);
+    border-bottom: 2px solid var(--color-tertiary);
+}
