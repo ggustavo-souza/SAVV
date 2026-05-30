@@ -1,0 +1,128 @@
+@import url('style.css');
+
+button i {
+    font-size: 1.5rem;
+    color: var(--cor-primary);
+}
+
+.informacoesUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.informacoesUsuario h2 {
+    font-size: var(--tamanho-subtitulo);
+    font-weight: 600;
+}
+
+.informacoesUsuario p {
+    font-size: var(--tamanho-textoSub);
+    color: var(--color-textoSub);
+    font-weight: var(--groçura-textoSub);
+    line-height: var(--altura-linha-textoSub);
+}
+
+.opcoesConta {
+    margin: 3rem 5rem 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.imagemUsuario {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--cor-borda-principal);
+    border-radius: 0.3rem;
+}
+
+.imagemUsuario img {
+    width: 100%;
+    height: 100%;
+}
+
+.config {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: start;
+}
+
+.btn-config {
+    background-color: var(--color-tertiary);
+    color: var(--color-secundary);
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ocorrenciasUsuario {
+    padding: 1rem 4rem 0rem 4rem;
+}
+
+.tituloFiltros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor-borda-principal);
+    padding-bottom: 0.5rem;
+}
+
+.tituloFiltros p {
+    font-size: var(--tamanho-textoSub);
+    font-weight: 600;
+    color: var(--color-textoSub);
+}
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    color: var(--color-textoSub);
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-filtro-ativo {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    color: var(--color-tertiary);
+    border-bottom: 2px solid var(--color-tertiary);
+}
+
+.iconeRelogio {
+    font-size: 1.2rem;
+    color: var(--color-textoSub);
+    background-color: var(--cor-borda-principal);
+    width: fit-content;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}

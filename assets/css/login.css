@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://googleapis.com');
 @import url('style.css');
 
 :root {
@@ -6,7 +6,7 @@
     --color-secundary: #FFFFFF;
     --color-information: #9D9D9D;
     --color-border: #D9D9D9;
-    /* Adicionar variáveis de tamanho de fonte */
+   
 }
 
 * {
@@ -17,65 +17,71 @@
 }
 
 body {
-    background-color:var(--color-secundary);
+    background-color: var(--color-secundary);
 }
+
 
 .boxlogin {
-    padding-left: 25%;
-    padding-right: 25%;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    padding-left: 20px;   
+    padding-right: 20px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
 }
 
-.boxlogin .forms{
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10%;
-    margin: 15% 0 15% 0;
+
+.boxlogin .forms {
+    border: 1px solid var(--color-border); 
+    padding: 30px 35px;                    
+    margin: 20px 0;                        
+    max-width: 420px;                      
+    width: 100%;                           
 }
 
-.boxlogin h2{
+.boxlogin h2 {
     color: var(--color-primary);
-    font-size: var(--tamanho-textoSub);
+    font-size: 0.5rem;
     letter-spacing: 1px;
     font-weight: var(--groçura-textoSub);
     margin-bottom: -1%;
     text-align: center;
-    
 }
 
-.boxlogin h1{
+.boxlogin h1 {
     color: #000000;
-    font-size: var(--tamanho-tituloPrincipal);
+    font-size: 1.5rem;
     font-weight: var(--groçura-tituloPrincipal);
     text-align: center;
-    margin-bottom: 9%;
+    margin-bottom: 8px; 
 }
 
-.boxlogin label{
+.boxlogin label {
     color: var(--color-information);
-    font-size: var(--tamanho-textoSub);
+    font-size: 0.7rem;
     font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
-
 }
 
-.boxlogin input{
-    margin-top: 4%;
+
+.boxlogin input {
+    margin-top: 6px;                  
     border: 1px solid var(--color-border);
-    font-size: var(--tamanho-textoSub);
+    font-size: 0.7rem;
     font-weight: var(--groçura-textoSub);
     letter-spacing: 1px;
-    padding: 3%;
+    padding: 10px 12px;                
     width: 100%;
 }
 
-.boxlogin input:focus{
+.boxlogin input:focus {
     border: 1px solid var(--color-information);
     outline: 2.5px solid var(--color-information);
 }
 
-.boxlogin input[type="text"]{
-    margin-bottom: 10%;
+
+.boxlogin input[type="text"] {
+    margin-bottom: 20px;
 }
 
 .boxlogin .DisplayLabel {
@@ -83,72 +89,80 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 10px; 
 }
 
-.boxlogin #RememberSenha{
-    font-size: var(--tamanho-textoSub);
+.boxlogin #RememberSenha {
+    font-size: 0.5rem;
     font-weight: var(--groçura-textoSub);
     color: var(--color-primary);
 }
 
-.boxlogin button{
-    margin-top: 10%;
+
+.boxlogin button {
+    margin-top: 24px;                  
     width: 100%;
-    padding: 3%;   
+    padding: 12px;                     
     border: 3px solid var(--color-primary);
     background-color: var(--color-primary);
     color: var(--color-secundary);
     font-weight: var(--groçura-textoSub);
     letter-spacing: 3px;
-    font-size: var(--tamanho-textoSub);
+    font-size: 0.6rem;
     font-style: bold;
     transition: 0.2s ease-in-out; 
 }
 
-.boxlogin button:hover{
+.boxlogin button:hover {
     background-color: var(--color-secundary);
     color: var(--color-primary);
     cursor: pointer;
     transition: 0.3s ease-in-out; 
 }
 
-.boxlogin hr{
-    margin-top: 10%;
+
+.boxlogin hr {
+    margin-top: 24px;
     width: 100%;
-    margin-bottom: 3%;
+    margin-bottom: 12px;
 }
 
-.boxlogin p{
-    color: var(--var-primary);
+.boxlogin p {
+    color: var(--color-primary); 
     font-weight: var(--groçura-textoSub);
-    font-size: var(--tamanho-textoSub);
+    font-size: 0.7rem;
     text-align: center;
     letter-spacing: 1.5px;
 }
 
-.boxlogin #RegistrarLink{
+.boxlogin #RegistrarLink {
     color: #000000;
     font-weight: var(--groçura-textoSub);
-    font-size: var(--tamanho-textoSub);
+    font-size: 0.7rem;
     letter-spacing: 2px;
 }
 
+
+
 @media (max-width: 768px) {
     .boxlogin {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .boxlogin h1{
+    .boxlogin .forms {
+        padding: 24px 20px; 
+    }
+
+    .boxlogin h1 {
         font-size: var(--tamanho-subtitulo);
-     }
+    }
 
-     .boxlogin #RememberSenha{
+    .boxlogin #RememberSenha {
         font-size: var(--tamanho-textoSub-mobile);
-     }
+    }
 
-     .boxlogin #RegistrarLink{
+    .boxlogin #RegistrarLink {
         font-size: var(--tamanho-textoSub-mobile);
-     }
+    }
 }
-
