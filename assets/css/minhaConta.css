@@ -27,28 +27,27 @@ button i {
     margin: 3rem 5rem 5rem 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
     border: 1px solid var(--cor-borda-principal);
     padding: 2rem;
     gap: 2rem;
 }
 
-
-
 .imagemUsuario {
-    width: 120px;  
-    height: 120px; 
-    overflow: hidden; 
-    
-    
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+
+
 }
 
 .imagemUsuario img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    object-position: center; 
+    object-fit: cover;
+    object-position: center;
 }
+
 .config {
     width: 50%;
     display: flex;
@@ -129,7 +128,10 @@ button i {
     margin-right: 2rem;
 }
 
-.id, .tipo, .status {
+.id,
+.tipo,
+.status,
+.statusNegado {
     font-size: var(--tamanho-textoSub-mobile);
     width: fit-content;
     font-weight: var(--groçura-textoSub);
@@ -137,7 +139,11 @@ button i {
     padding: 0.3rem;
 }
 
-.id, .tipo, .status, p {
+.id,
+.tipo,
+.status,
+.statusNegado,
+p {
     align-self: center;
 }
 
@@ -156,6 +162,12 @@ button i {
     background-color: var(--color-warning);
     border: 1.5px solid #9f7905;
     color: #5c4607;
+}
+
+.statusNegado {
+    background-color: var(--color-error);
+    border: 1.5px solid var(--color-error);
+    color: var(--color-secundary);
 }
 
 .tempo {
@@ -183,8 +195,17 @@ button i {
     flex-direction: column;
 }
 
+.ocorrencias {
+    margin: 3rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 .ocorrencia {
-    border: 1px solid red;
+    border: 1px solid var(--cor-borda-principal);
+    display: flex;
+    flex-direction: row;
 }
 
 .textoOcorrencia {
@@ -201,4 +222,39 @@ button i {
     padding: 1px;
     background-color: var(--cor-borda-principal);
     height: 100px;
+}
+
+.imagemOcorrencia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.imagemOcorrencia {
+    margin: 1rem 2rem 1rem 2rem;
+    width: 50%;
+    height: 50%;
+}
+
+.lerRelato {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 3rem 2rem 3.2rem;
+}
+
+.lerRelato a {
+    color: var(--cor-tertiary);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration-color: var(--cor-tertiary);
+    transition: all 0.5s ease-in;
+}
+
+.lerRelato a:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.05);
+    text-decoration: underline;
 }
