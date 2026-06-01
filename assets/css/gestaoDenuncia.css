@@ -52,7 +52,6 @@
     color: var(--color-textoSub);
 }
 
-/* Tabs Navigation */
 .nav-tabs {
     display: flex;
     gap: 3rem;
@@ -75,7 +74,6 @@
     border-bottom: 2px solid #000;
 }
 
-/* Cards Section */
 .cards-container {
     display: flex;
     flex-direction: column;

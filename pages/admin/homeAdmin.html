@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SAVV Votorantim - Admin Home</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/navbar.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/home-adm.css">
+    <link rel="stylesheet" href="../../assets/css/homeAdmin.css">
 </head>
 
 <body>
@@ -24,12 +24,116 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <div class="containerDenuncia">
+    <main class="dashboard-container">
+        <header class="dashboard-header">
             <span class="subtituloVerde">CENTRAL DE OPERAÇÕES</span>
-            <span class="tituloPrincipal">Monitoramento Ambiental</span>
-        </div>
-    </section>
+            <h1 class="tituloPrincipal">Monitoramento Ambiental</h1>
+        </header>
+
+        <nav class="dashboard-nav">
+            <ul>
+                <li class="active">ÍNDICE DO DESMATAMENTO</li>
+                <li>PENDENTES</li>
+                <li>EM ANÁLISE</li>
+                <li>CONCLUÍDOS</li>
+            </ul>
+        </nav>
+
+        <section class="dashboard-grid">
+            <div class="card card-mapa">
+                <img src="../../assets/images/mapa_secretaria.png" alt="Mapa de Monitoramento"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="card card-stats">
+                <h3 class="card-title">TOTAL DA PERDA DE COBERTURA<br>ARBÓREA</h3>
+                <div class="stats-main">
+                    <span class="stats-value">44 Ha</span>
+                    <span class="stats-indicator">+17%</span>
+                </div>
+
+                <h4 class="card-subtitle">BAIRROS AFETADOS</h4>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>RIO ACIMA</span>
+                        <span>24 Ha</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 54%; background-color: var(--color-primary);"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>VOTOCEL</span>
+                        <span>13 Ha</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 29%; background-color: var(--color-primary);"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>VILA AMORIM</span>
+                        <span>7 Ha</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 15%; background-color: var(--color-primary);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-chart">
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <span class="bar-value">21 Ha</span>
+                        <div class="bar" style="height: 47%;"></div>
+                        <span class="bar-label">JAN</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-value">29 Ha</span>
+                        <div class="bar" style="height: 65%;"></div>
+                        <span class="bar-label">FEV</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-value">37 Ha</span>
+                        <div class="bar" style="height: 84%;"></div>
+                        <span class="bar-label">MAR</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-value">31 Ha</span>
+                        <div class="bar" style="height: 70%;"></div>
+                        <span class="bar-label">ABR</span>
+                    </div>
+                    <div class="bar-item active-bar">
+                        <span class="bar-value">44 Ha</span>
+                        <div class="bar" style="height: 100%;"></div>
+                        <span class="bar-label">MAI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-report">
+                <div class="report-content">
+                    <div class="report-text">
+                        <span class="report-label">RELATÓRIO TÉCNICO</span>
+                        <span class="report-title">Consolidado maio/2024</span>
+                    </div>
+                    <div class="report-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-download" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="contatos">
             <a href="http://"><img src="../../assets/images/icon-face.png" alt="Facebook"></a>
