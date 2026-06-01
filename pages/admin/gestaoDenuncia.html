@@ -25,57 +25,94 @@
 
     <main>
         <section>
-            <div>
-                <h4>CENTRAL DE OPERAÇÕES</h4>
-            </div>
-
-            <div>
-                <h1>Gestão de Denúncias</h1>
-                <button class="btn btn-primary"><i class="bi bi-download me-2"></i>Relatório Mensal</button>
-            </div>
-
-            <header>
-                <ul>
-                    <li><a href=" ">TODOS</a></li>
-                    <li><a href=" ">PENDENTES</a></li>
-                    <li><a href=" ">EM ANÁLISE</a></li>
-                    <li><a href=" ">CONCLUÍDOS</a></li>
-                </ul>
+            <header class="cabecalhoAdmin">
+                <div class="titulosAdmin">
+                    <p>CENTRAL DE OPERAÇÕES</p>
+                    <h1>Gestão de Denuncia</h1>
+                </div>
+                <button class="btn-relatorio"><i class="bi bi-download"></i> RELATÓRIO MENSAL</button>
             </header>
 
+            <ul class="nav-tabs">
+                <li class="active"><a href="#">TODOS</a></li>
+                <li><a href="#">PENDENTES</a></li>
+                <li><a href="#">EM ANÁLISE</a></li>
+                <li><a href="#">CONCLUÍDOS</a></li>
+            </ul>
 
-            <div class="card-form">
-                <Label class="label-id">ID:8943</Label>
-                <label class=label-pendente>PENDENTE</label>
-                <label class="label-hora">HÁ 2 HORAS</label>
-                <h2> Rua das Palmeiras, 142</h2>
-                <h3> PODA: Árvore de grande porte caída bloqueando a calçada na Rua...</h3>
-                <label class="label-responsavel">RESPONSÁVEL</label>
-                <h4>Sem atribuição</h4>
-                <button class="btn btn-primary">ATRIBUIR</button>
-            </div>
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="card-form">
+                    <div class="card-left">
+                        <span class="label-id">ID: 8943</span>
+                    </div>
+                    <div class="card-middle">
+                        <div class="card-tags">
+                            <span class="tag-status tag-pendente">PENDENTE</span>
+                            <span class="label-hora">HÁ 2 HORAS</span>
+                        </div>
+                        <h2 class="card-title">Rua das Palmeiras, 142</h2>
+                        <h3 class="card-description">PODA: Árvore de grande porte caída bloqueando a calçada na Rua...</h3>
+                    </div>
+                    <div class="card-right">
+                        <div class="card-responsible">
+                            <span class="label-responsavel">RESPONSÁVEL</span>
+                            <h4 class="name-responsavel">Sem Atribuição</h4>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-atribuir">ATRIBUIR</button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="card-form">
-                <Label class="label-id">ID:8623</Label>
-                <label class=label-em-analise>EM ANÁLISE</label>
-                <label class="label-hora">ONTEM, 14:30</label>
-                <h2> Av, São João, 900 </h2>
-                <h3> Solicitação de plantio de ipê amarelo em calçada</h3>
-                <label class="label-responsavel">RESPONSÁVEL</label>
-                <h4>Engª Mariana Costa</h4>
-                <button class="btn btn-primary">VER VISITA</button>
-                <button class="btn btn-secondary">ATUALIZAR</button>
-            </div>
+                <!-- Card 2 -->
+                <div class="card-form">
+                    <div class="card-left">
+                        <span class="label-id">ID: 8623</span>
+                    </div>
+                    <div class="card-middle">
+                        <div class="card-tags">
+                            <span class="tag-status tag-em-analise">EM ANÁLISE</span>
+                            <span class="label-hora">ONTEM, 14:28</span>
+                        </div>
+                        <h2 class="card-title">Av. São João, 900</h2>
+                        <h3 class="card-description">Solicitação de plantio de ipê amarelo em calçada pública</h3>
+                    </div>
+                    <div class="card-right">
+                        <div class="card-responsible">
+                            <span class="label-responsavel">RESPONSÁVEL</span>
+                            <h4 class="name-responsavel">Eng. Mariana Costa</h4>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-ver-visita">VER VISITA</button>
+                            <button class="btn btn-atualizar">ATUALIZAR</button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="card-form">
-                <Label class="label-id">ID:8624</Label>
-                <label class=label-concluido>CONCLUÍDO</label>
-                <label class="label-hora">12 MAI, 09:30</label>
-                <h2> Rua das Palmeiras, 142 </h2>
-                <h3> PODA: Árvore de grande porte caída bloqueando a calçada na Rua...</h3>
-                <label class="label-responsavel">RESPONSÁVEL</label>
-                <h4>Engª Mariana Costa</h4>
-                <button class="btn btn-primary">ARQUIVO</button>
+                <!-- Card 3 -->
+                <div class="card-form">
+                    <div class="card-left">
+                        <span class="label-id">ID: 8622</span>
+                    </div>
+                    <div class="card-middle">
+                        <div class="card-tags">
+                            <span class="tag-status tag-resolvido">RESOLVIDO</span>
+                            <span class="label-hora">12 MAI, 09:30</span>
+                        </div>
+                        <h2 class="card-title">Rua 21 de Março</h2>
+                        <h3 class="card-description">Erradicação de árvore seca concluída com sucesso.</h3>
+                    </div>
+                    <div class="card-right">
+                        <div class="card-responsible">
+                            <span class="label-responsavel">RESPONSÁVEL</span>
+                            <h4 class="name-responsavel">Eng. Mariana Costa</h4>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-arquivo">ARQUIVO</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
