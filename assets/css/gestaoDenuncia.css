@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 3em 3em 2em;
+    margin: 4em 3em 2em;
     padding: 0;
     border: none;
 }
@@ -52,7 +52,7 @@
     color: var(--color-textoSub);
 }
 
-.nav-tabs {
+.abas-navegacao {
     display: flex;
     gap: 3rem;
     margin: 0 3em 2em;
@@ -60,7 +60,7 @@
     padding: 0;
 }
 
-.nav-tabs li a {
+.abas-navegacao li a {
     text-decoration: none;
     color: var(--color-textoSub);
     font-weight: 700;
@@ -69,19 +69,19 @@
     text-transform: uppercase;
 }
 
-.nav-tabs li.active a {
+.abas-navegacao li.ativo a {
     color: #000;
     border-bottom: 2px solid #000;
 }
 
-.cards-container {
+.container-cartoes {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin: 0 3em 3em;
 }
 
-.card-form {
+.cartao-formulario {
     display: flex;
     border: 1px solid var(--cor-borda-principal);
     background-color: #fff;
@@ -91,14 +91,14 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
 }
 
-.card-left {
+.cartao-esquerda {
     width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.label-id {
+.rotulo-id {
     transform: rotate(-90deg);
     color: #cfcfcf;
     font-size: 0.8rem;
@@ -107,7 +107,7 @@
     white-space: nowrap;
 }
 
-.card-middle {
+.cartao-meio {
     flex: 1;
     padding-left: 1.5rem;
     display: flex;
@@ -115,13 +115,13 @@
     gap: 0.8rem;
 }
 
-.card-tags {
+.etiquetas-cartao {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.tag-status {
+.etiqueta-status {
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
     font-size: 0.65rem;
@@ -130,60 +130,60 @@
     letter-spacing: 0.5px;
 }
 
-.tag-pendente {
+.etiqueta-pendente {
     color: #d97706;
     background-color: #fef3c7;
     border: 1px solid #fde68a;
 }
 
-.tag-em-analise {
+.etiqueta-em-analise {
     color: #1d4ed8;
     background-color: #eff6ff;
     border: 1px solid #bfdbfe;
 }
 
-.tag-resolvido {
+.etiqueta-resolvido {
     color: #15803d;
     background-color: #f0fdf4;
     border: 1px solid #bbf7d0;
 }
 
-.label-hora {
+.rotulo-hora {
     color: var(--color-textoSub);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.card-title {
+.titulo-cartao {
     font-size: 1.5rem;
     font-weight: 700;
     color: #000;
     margin: 0;
 }
 
-.card-description {
+.descricao-cartao {
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--color-textoSub);
     margin: 0;
 }
 
-.card-right {
+.cartao-direita {
     display: flex;
     align-items: center;
     gap: 2.5rem;
     padding-right: 3rem;
 }
 
-.card-responsible {
+.responsavel-cartao {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 0.2rem;
 }
 
-.label-responsavel {
+.rotulo-responsavel {
     font-size: 0.65rem;
     color: var(--color-textoSub);
     font-weight: 700;
@@ -191,14 +191,14 @@
     letter-spacing: 0.5px;
 }
 
-.name-responsavel {
+.nome-responsavel {
     font-size: 0.85rem;
     font-weight: 600;
     color: #000;
     margin: 0;
 }
 
-.card-actions {
+.acoes-cartao {
     display: flex;
     gap: 1rem;
 }

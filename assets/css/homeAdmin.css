@@ -1,10 +1,10 @@
-.dashboard-container {
+.container-painel {
     max-width: 1200px;
     margin: 2rem auto;
     padding: var(--space-lg) var(--space-md);
 }
 
-.dashboard-header {
+.cabecalho-painel {
     margin-bottom: var(--space-xl);
 }
 
@@ -18,19 +18,19 @@
     margin-bottom: var(--space-sm);
 }
 
-.dashboard-nav {
+.navegacao-painel {
     margin-bottom: var(--space-lg);
     border-bottom: 1px solid var(--cor-borda-principal);
 }
 
-.dashboard-nav ul {
+.navegacao-painel ul {
     list-style: none;
     display: flex;
     gap: var(--space-xl);
     padding-bottom: 0;
 }
 
-.dashboard-nav li {
+.navegacao-painel li {
     font-size: 0.85rem;
     font-weight: 600;
     color: #666;
@@ -40,11 +40,11 @@
     position: relative;
 }
 
-.dashboard-nav li.active {
+.navegacao-painel li.ativo {
     color: #000;
 }
 
-.dashboard-nav li.active::after {
+.navegacao-painel li.ativo::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -54,13 +54,13 @@
     background-color: #000;
 }
 
-.dashboard-grid {
+.grade-painel {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     grid-gap: var(--space-lg);
 }
 
-.card {
+.cartao {
     background-color: #fff;
     border: 1px solid var(--cor-borda-principal);
     border-radius: 4px;
@@ -68,21 +68,21 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
-.card-mapa {
+.cartao-mapa {
     padding: 10px;
     height: 450px;
 }
 
-.card-mapa img {
+.cartao-mapa img {
     border-radius: 2px;
 }
 
-.card-stats {
+.cartao-estatisticas {
     display: flex;
     flex-direction: column;
 }
 
-.card-title {
+.titulo-cartao {
     font-size: 0.9rem;
     font-weight: 800;
     color: var(--color-primary);
@@ -90,7 +90,7 @@
     margin-bottom: var(--space-md);
 }
 
-.stats-main {
+.estatisticas-principal {
     display: flex;
     align-items: baseline;
     gap: var(--space-sm);
@@ -99,19 +99,19 @@
     padding-bottom: var(--space-md);
 }
 
-.stats-value {
+.valor-estatisticas {
     font-size: 3rem;
     font-weight: 800;
     color: #000;
 }
 
-.stats-indicator {
+.indicador-estatisticas {
     font-size: 0.9rem;
     font-weight: 700;
     color: #d93025;
 }
 
-.card-subtitle {
+.subtitulo-cartao {
     font-size: 0.85rem;
     font-weight: 800;
     color: var(--color-primary);
@@ -119,11 +119,11 @@
     margin-bottom: var(--space-md);
 }
 
-.progress-item {
+.item-progresso {
     margin-bottom: var(--space-md);
 }
 
-.progress-label {
+.rotulo-progresso {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
@@ -132,7 +132,7 @@
     color: #000;
 }
 
-.progress-bar-container {
+.container-barra-progresso {
     width: 100%;
     height: 8px;
     background-color: #f0f0f0;
@@ -140,16 +140,16 @@
     overflow: hidden;
 }
 
-.progress-bar {
+.barra-progresso {
     height: 100%;
     border-radius: 4px;
 }
 
-.card-chart {
+.cartao-grafico {
     height: 300px;
 }
 
-.bar-chart {
+.grafico-barras {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -157,7 +157,7 @@
     padding-top: 20px;
 }
 
-.bar-item {
+.item-barra {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,7 +166,7 @@
     justify-content: flex-end;
 }
 
-.bar {
+.barra {
     width: 100%;
     background-color: #e2e8f0;
     border-radius: 2px 2px 0 0;
@@ -174,66 +174,66 @@
     transition: height 0.3s ease;
 }
 
-.bar-item.active-bar .bar {
+.item-barra.barra-ativa .barra {
     background-color: var(--color-primary);
 }
 
-.bar-value {
+.valor-barra {
     font-size: 0.75rem;
     font-weight: 800;
     margin-bottom: 5px;
     color: #000;
 }
 
-.bar-label {
+.rotulo-barra {
     font-size: 0.7rem;
     color: #666;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.card-report {
+.cartao-relatorio {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.report-content {
+.conteudo-relatorio {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.report-text {
+.texto-relatorio {
     display: flex;
     flex-direction: column;
 }
 
-.report-label {
+.rotulo-relatorio {
     font-size: 0.75rem;
     color: #666;
     font-style: italic;
     margin-bottom: 4px;
 }
 
-.report-title {
+.titulo-relatorio {
     font-size: 0.95rem;
     font-weight: 800;
     color: #000;
 }
 
-.report-icon {
+.icone-relatorio {
     color: #000;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .dashboard-grid {
+    .grade-painel {
         grid-template-columns: 1fr;
     }
 
-    .dashboard-nav ul {
+    .navegacao-painel ul {
         flex-wrap: wrap;
         gap: var(--space-md);
     }
