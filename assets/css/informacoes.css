@@ -1,10 +1,88 @@
 @import url('./style.css');
 
-.boxInfos {
+.BoxInfos {
     display: grid;
     grid-template-columns: 60% 40%;
-    padding: 10%;
+    padding: 5em;
+    row-gap: 3em;
+    column-gap: 2em;
 }
 
+.InfosDenuncias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 0.1em solid var(--cor-borda-principal);
+    grid-column: span 2;
+}
 
+.InfosDenuncias i{
+    font-size: 2em;
+    padding: 0.2em 0.5em 0.2em 0.5em ;
+    margin: 0.8em;
+    text-align: center;
+    align-items: center;
+    border: 0.05em solid var(--cor-borda-principal);
+    color: var(--color-primary);
+    background-color: rgba(19, 237, 84, 0.1);;
+}
 
+.InfosDenuncias .DisplayTittle {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 2.2em 3em;
+    width: 25em;
+    margin-top: 1.5em;
+}
+
+.InfosDenuncias .DisplayTittle #categoria {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    background-color: rgba(19, 237, 84, 0.1);
+    border: 0.1em solid rgba(37, 94, 84, 0.4);
+    color: rgba(0, 78, 23, 0.4);
+    margin: 0.8em 1em 0.8em 0.8em;
+    font-size: 0.6em;
+    font-weight: var(--groçura-textoSub);
+    text-align: center;
+}
+
+.InfosDenuncias .DisplayTittle #status {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    background-color: rgba(19, 237, 84, 0.1);
+    border: 0.1em solid rgba(37, 94, 84, 0.4);
+    color: rgba(0, 78, 23, 0.4);
+    margin: 0.8em 1em 0.8em 0.8em;
+    font-size: 0.6em;
+    font-weight: var(--groçura-textoSub);
+    text-align: center;
+}
+
+.InfosDenuncias .DisplayTittle h1 {
+    font-size: 1.5em;
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.InfosDenuncias .DisplayTittle .textoSub {
+    line-height: 0px;
+    font-size: 0.7em;
+    padding: 0.1em;
+}
+
+.colunas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.colunas .boxDescricao {
+    padding: 1em 1.5em 1em 1.5em;
+    border: 0.1em solid var(--cor-borda-principal);
+}
+
+.colunas .boxDescricao p{
+    font-size: 14px;
+    color: #747474;
+}
