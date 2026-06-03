@@ -38,7 +38,6 @@
         </div>
 
         <div class="containerFormularioDenuncia">
-
             <form class="formDenuncia">
                 <div class="denunciaItem">
                     <label class="labelDenuncia" for="tipoServico">tipo do serviço</label>
@@ -74,7 +73,9 @@
                 </div>
 
                 <div class="denunciaItem">
-                    <label class="labelDenuncia" for="foto">evidência fotografica</label>
+                    <label for="botao-arquivo" class="labelDenuncia">evidência fotográfica</label>
+                    <label class="botao-arquivo" id='botao-arquivo' for="foto"><i class="bi bi-cloud"></i>Arraste fotos
+                        ou clique para fazer upload</label>
                     <input class="inputDenunciaAnexo" type="file" id="foto" name="foto" accept="image/*" required>
                 </div>
 
