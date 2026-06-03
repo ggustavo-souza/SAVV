@@ -81,9 +81,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    gap: var(--space-lg);
-
+    margin-top: 4rem;
 }
 
 .estatisticasHome {
@@ -92,72 +90,123 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
+    border-top: 1px solid var(--cor-borda-principal);
+    border-bottom: 1px solid var(--cor-borda-principal);
 }
 
 .estatisticaItem {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 30px;
-    border: 1px solid var(--cor-borda-principal);
+    border-right: 1px solid var(--cor-borda-principal);
     width: 100%;
     padding: var(--space-xl) 0px var(--space-xl) var(--space-xl);
 }
 
+.estatisticaItem:last-child {
+    border-right: none;
+}
+
 .estatisticaItem p {
-    font-size: 0.7rem;
-    flex-direction: none;
+    font-size: var(--tamanho-textoSub);
     font-weight: var(--groçura-textoSub);
     color: var(--color-textoSub);
-    /* border: 1px solid var(--cor-borda-principal); */
+    margin-bottom: var(--space-sm);
 }
 
 .estatisticaItem h3 {
-    font-size: var(--tamanho-tituloTerciario);
+    font-size: var(--tamanho-subtitulo);
     font-weight: var(--groçura-tituloPrincipal);
-
-    /* border: 1px solid var(--cor-borda-principal); */
+    color: var(--color-tertiary);
 }
-
-/* .linha-divisoria {
-    width: 100%;
-    height: 100%;
-    background-color: var(--cor-borda-principal);
-    text-align: center;
-    border: 1px solid var(--cor-borda-principal);
-} */
 
 .mapa-filtro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    gap: var(--space-lg);
-    margin-top: var(--space-xl);
+    gap: var(--space-xl);
+    margin: var(--space-xxl) var(--space-especial-mapa);
     border: 1px solid var(--cor-borda-principal);
-    padding: var(--space-sm) var(--space-especial-mapa) var(--space-sm) var(--space-sm);
-    margin: var(--space-xxl) var(--space-especial-mapa) var(--space-especial-mapa) var(--space-especial-mapa);
-    background-color: #FFFFFF;
+    border-radius: 8px;
+    background-color: var(--color-secundary);
 }
 
-.mapa-filtro .legendaMapa {
-    justify-content: none;
-    align-items: none;
-    align-items: center;
-
+.mapaServicos {
+    width: 70%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
-.mapa-filtro .legendaMapa p {
-    font-size: 0.8rem;
-    font-weight: var(--groçura-textoSub);
-    color: var(--color-textoSub);
+.legendaMapa {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-xl) 0 var(--space-xl) 0;
+}
 
+.tituloLegenda {
+    font-size: var(--tamanho-textoSub);
+    font-weight: var(--groçura-tituloPrincipal);
+    color: var(--color-tertiary);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+}
+
+.linhaDivisoriaLegenda {
+    border: 0;
+    border-top: 1px solid var(--cor-borda-principal);
+    margin-bottom: var(--space-lg);
+    width: 80%;
 }
 
 .tipo-filtro {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--space-sm);
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+    width: 80%;
+}
+
+.indicadorFiltro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.tipo-filtro p {
+    font-size: var(--tamanho-textoSub);
+    font-weight: var(--groçura-textoSub);
+    color: var(--color-tertiary);
+}
+
+.pontoAzul,
+.pontoVermelho,
+.pontoAmarelo {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pontoAzul {
+    background-color: #0d6efd;
+}
+
+.pontoVermelho {
+    background-color: var(--color-error);
+}
+
+.pontoAmarelo {
+    background-color: var(--color-warning);
+}
+
+.pontoAtivo {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: inline-block;
 }
