@@ -4,6 +4,7 @@
     letter-spacing: var(--espaçamento-tituloPrincipal);
     line-height: var(--altura-linha-tituloPrincipal);
 }
+
 .textoSub {
     font-size: var(--tamanho-textoSub);
     margin-top: var(--space-md);
@@ -11,6 +12,7 @@
     font-weight: var(--groçura-textoSub);
     color: var(--color-textoSub);
 }
+
 .btnFormularioDenuncia {
     background-color: var(--color-primary);
     border: none;
@@ -21,39 +23,45 @@
     transition: all 0.3s ease-out;
     margin-top: var(--space-xl);
 }
+
 .btnFormularioDenuncia:hover {
     filter: brightness(0.9);
 }
+
 .btnFormularioDenuncia a {
     color: var(--color-secundary);
     text-decoration: none;
     font-size: 1rem;
 }
+
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-xl) var(--space-xl); 
+    padding: var(--space-xl) var(--space-xl);
     width: 40%;
     margin-left: 4%;
     /* border: 2px solid var(--color-primary); */
 }
+
 .conteiner-intro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   
+
     height: calc(100vh - 96px);
-     
-       
-    width: 100%;          /* Garante que ele ocupe até os 1200px em telas normais */
+
+
+    width: 100%;
+    /* Garante que ele ocupe até os 1200px em telas normais */
     box-sizing: border-box;
-    
+
 }
+
 .img-hero {
     width: 33%;
-    height: auto; 
-    
+    height: auto;
+
 }
 
 .img-hero img {
@@ -69,22 +77,24 @@
     filter: grayscale(0%);
 }
 
-.conteiner-estatiticasHome {
+.conteiner-estatisticasHome {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
     gap: var(--space-lg);
-    
+
 }
+
 .estatisticasHome {
     display: flex;
     flex-direction: row;
     align-items: center;
-     justify-content: space-between;
+    justify-content: space-between;
     width: 100%;
-    
+
 }
+
 .estatisticaItem {
     display: flex;
     flex-direction: column;
@@ -94,6 +104,7 @@
     width: 100%;
     padding: var(--space-xl) 0px var(--space-xl) var(--space-xl);
 }
+
 .estatisticaItem p {
     font-size: 0.7rem;
     flex-direction: none;
@@ -101,12 +112,14 @@
     color: var(--color-textoSub);
     /* border: 1px solid var(--cor-borda-principal); */
 }
+
 .estatisticaItem h3 {
     font-size: var(--tamanho-tituloTerciario);
     font-weight: var(--groçura-tituloPrincipal);
-    
+
     /* border: 1px solid var(--cor-borda-principal); */
 }
+
 /* .linha-divisoria {
     width: 100%;
     height: 100%;
@@ -115,30 +128,33 @@
     border: 1px solid var(--cor-borda-principal);
 } */
 
-.mapa-filtro{
+.mapa-filtro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
     gap: var(--space-lg);
     margin-top: var(--space-xl);
     border: 1px solid var(--cor-borda-principal);
-    padding: var(--space-sm) var(--space-especial-mapa) var(--space-sm) var(--space-sm); 
-    margin: var(--space-xxl ) var(--space-especial-mapa) var(--space-especial-mapa) var(--space-especial-mapa);
+    padding: var(--space-sm) var(--space-especial-mapa) var(--space-sm) var(--space-sm);
+    margin: var(--space-xxl) var(--space-especial-mapa) var(--space-especial-mapa) var(--space-especial-mapa);
     background-color: #FFFFFF;
 }
+
 .mapa-filtro .legendaMapa {
     justify-content: none;
     align-items: none;
     align-items: center;
-    
+
 }
-.mapa-filtro .legendaMapa  p{
+
+.mapa-filtro .legendaMapa p {
     font-size: 0.8rem;
     font-weight: var(--groçura-textoSub);
     color: var(--color-textoSub);
-    
+
 }
+
 .tipo-filtro {
     display: flex;
     flex-direction: row;
