@@ -70,6 +70,7 @@
     line-height: 0px;
     font-size: 0.7em;
     padding: 0.3em;
+    margin: 0.8em 1em 0.8em 0.8em;
 }
 
 .colunas {
@@ -110,4 +111,60 @@
 
 hr{
     margin: 0.5em 0em 1.5em 0em;
+}
+
+@media (max-width: 768px) {
+
+    .InfosDenuncias {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 0.1em solid var(--cor-borda-principal);
+        grid-column: span 2;
+        text-align: center;
+        align-items: center;
+        padding: 2em 0em 2em 0em;
+    }
+
+    .InfosDenuncias .DisplayTittle {
+        width: 20em;
+        column-gap: 0em;
+        grid-template-rows: 2.5em 2.5em;
+        grid-template-columns: 35% 35% 20%;
+
+    }
+
+    .InfosDenuncias .DisplayTittle p{
+        grid-row: 2;
+    }
+
+    .InfosDenuncias .DisplayTittle #categoria{
+        margin-right: 0em;
+    }
+
+    .InfosDenuncias .DisplayTittle .textoSub{
+        grid-row: 2;
+        font-size: 0.6em;
+        padding: 0.3em;
+        margin: 1.6em 0em 0.8em 0em;
+    }
+
+    .InfosDenuncias .DisplayTittle h1{
+        grid-row: 1;
+        font-size: 1.5em;
+    }
+
+    .InfosDenuncias i{
+        width: 2em;
+        margin: 0em;
+    }
+
+    .colunas {
+        grid-column: span 2;
+    }
+
+    .colunas .box p{
+        font-size: 0.8em;
+    }
+
 }
