@@ -17,7 +17,7 @@
 }
 
 .InfosDenuncias i{
-    font-size: 2em;
+    font-size: 2.5em;
     padding: 0.2em 0.5em 0.2em 0.5em ;
     margin: 0.8em;
     text-align: center;
@@ -30,9 +30,10 @@
 .InfosDenuncias .DisplayTittle {
     display: grid;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 2.2em 3em;
+    grid-template-rows: 2.5em 3.5em;
     width: 25em;
     margin-top: 1.5em;
+    column-gap: 0.3em;
 }
 
 .InfosDenuncias .DisplayTittle #categoria {
@@ -42,7 +43,7 @@
     border: 0.1em solid rgba(37, 94, 84, 0.4);
     color: rgba(0, 78, 23, 0.4);
     margin: 0.8em 1em 0.8em 0.8em;
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-weight: var(--groçura-textoSub);
     text-align: center;
 }
@@ -50,17 +51,17 @@
 .InfosDenuncias .DisplayTittle #status {
     padding-bottom: 0.3em;
     padding-top: 0.3em;
-    background-color: rgba(19, 237, 84, 0.1);
-    border: 0.1em solid rgba(37, 94, 84, 0.4);
-    color: rgba(0, 78, 23, 0.4);
+    background-color: rgba(237, 182, 19, 0.1);
+    border: 0.1em solid rgba(237, 182, 19, 0.4);
+    color: rgba(215, 161, 0, 0.6);
     margin: 0.8em 1em 0.8em 0.8em;
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-weight: var(--groçura-textoSub);
     text-align: center;
 }
 
 .InfosDenuncias .DisplayTittle h1 {
-    font-size: 1.5em;
+    font-size: 2.3em;
     grid-column: span 3;
     grid-row: span 3;
 }
@@ -68,7 +69,7 @@
 .InfosDenuncias .DisplayTittle .textoSub {
     line-height: 0px;
     font-size: 0.7em;
-    padding: 0.1em;
+    padding: 0.3em;
 }
 
 .colunas {
@@ -84,11 +85,15 @@
 }
 
 .colunas .box p{
-    font-size: 14px;
-    color: #747474;
+    font-size: 1.2em;
+    color: #4d4c4c;
     margin: 0.1em;
     letter-spacing: 0.05em;
     justify-content: center;
+}
+
+.colunas .box h2{
+    font-size: 1em;
 }
 
 .colunas .box .boximg {
