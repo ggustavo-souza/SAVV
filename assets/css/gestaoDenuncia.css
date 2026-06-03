@@ -248,3 +248,17 @@
 .btn-arquivo:hover {
     background-color: #f9f9f9;
 }
+
+@media (max-width: 768px) {
+    .cartao-formulario {
+        flex-direction: column;
+    }
+
+    .cartao-direita {
+        flex-direction: column;
+    }
+
+    .rotulo-id {
+        transform: rotate(0);
+    }
+}
