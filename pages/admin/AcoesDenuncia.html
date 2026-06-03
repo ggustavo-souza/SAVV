@@ -21,13 +21,82 @@
                 class="logoNav"></a>
             <ul>
                 <button class="btnMenuHamburguer"><i class="bi bi-list corPrimaria"></i></button>
-                <button class="btn-login"><a href="minhaConta.html">Voltar</a></button>
+                <button class="btn-login"><a href="gestaoDenuncia.html">Voltar</a></button>
             </ul>
         </nav>
     </header>
 
+    <main class="container-acoes">
+        <section class="cards-informativos">
+            <div class="card-detalhes">
+                <div class="cabecalho-detalhes">
+                    <div class="icone-usuario">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    <div class="tags">
+                        <span class="tag-erradicacao">ERRADICAÇÃO</span>
+                        <span class="tag-prioridade">PRIORIDADE ALTA</span>
+                    </div>
+                    <span class="tempo-decorrido">HÁ 3 HORAS</span>
+                </div>
 
+                <h1 class="titulo-ocorrencia">Ocorrência #00342</h1>
 
+                <h2 class="subtitulo-secao">RELATO DO CIDADÃO</h2>
+                <p class="texto-relato">Árvore de grande porte está arrebentando a calçada na Rua das Flores próximo ao
+                    número 340, impedindo a passagem de pedestres e cadeirantes. O tronco está parcialmente sobre a
+                    fiação elétrica e oferece risco à população. Situação urgente, pois crianças passam por ali no
+                    caminho da escola toda manhã.</p>
+
+                <h2 class="subtitulo-secao">RELATO DO CIDADÃO</h2>
+                <img src="../../assets/images/evidencia.jpg" alt="Foto da ocorrência" class="foto-ocorrencia">
+            </div>
+
+            <div class="card-localizacao">
+                <h2 class="subtitulo-secao">LOCALIZAÇÃO E REGISTRO</h2>
+                <img src="../../assets/images/mapa_secretaria.png" alt="Mapa" class="mapa-ocorrencia">
+
+                <div class="info-localizacao">
+                    <div class="endereco">
+                        <h3 class="label-info">ENDEREÇO</h3>
+                        <p class="valor-destaque">Rua das Flores, 340</p>
+                        <p class="valor-secundario">Centro, Votorantim - SP</p>
+                    </div>
+                    <div class="coordenadas">
+                        <h3 class="label-info">COORDENADAS</h3>
+                        <p class="valor-secundario">-23.5412, -47.4472</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="plano-acao">
+            <h1 class="tituloPrincipal">Plano de ação técnica</h1>
+
+            <form class="formulario-acao">
+                <div class="linha-form">
+                    <div class="grupo-form">
+                        <label class="label-info">DESIGNAR RESPONSÁVEL PELA VISTORIA</label>
+                        <select class="input-form select-responsavel">
+                            <option value="">responsável pela vistoria</option>
+                        </select>
+                    </div>
+                    <div class="grupo-form">
+                        <label class="label-info">DATA AGENDADA</label>
+                        <input type="date" class="input-form input-data">
+                    </div>
+                </div>
+
+                <div class="grupo-form">
+                    <label class="label-info">INSTRUÇÕES ADICIONAIS PARA O FISCAL</label>
+                    <textarea class="input-form textarea-instrucoes"
+                        placeholder="Ex: Verificar se há área de APP aos fundos do lote..."></textarea>
+                </div>
+
+                <button type="button" class="btn-aprovar">APROVAR E GERAR ORDEM DE VISTORIA</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="contatos">
