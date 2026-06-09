@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVV Votorantim - Admin Home</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/homeFiscal.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="headerNav">
+        <nav class="navbar">
+            <img src="../../assets/images/SAVV_Logo_SemFundo.png" alt="Logo" class="logoNav">
+            <ul>
+                <button class="btnMenuHamburguer"><i class="bi bi-list corPrimaria"></i></button>
+                <li><a href="homeFiscal.html">Painel</a></li>
+                <button class="btn-login"><a href="../../index.html">Sair</a></button>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-fiscal">
+        <div class="cabecalho-tarefas">
+            <span class="subtitulo-central">CENTRAL DO FISCAL</span>
+            <h1 class="titulo-gestao">Gestão de Tarefas</h1>
+        </div>
+
+        <nav class="abas-tarefas">
+            <button class="aba ativa">TODOS</button>
+            <button class="aba">AGUARDANDO VISITA</button>
+            <button class="aba">AGUARDANDO RELATÓRIO</button>
+            <button class="aba">CONCLUÍDOS</button>
+        </nav>
+
+        <section class="lista-tarefas">
+            <!-- Cartão 1 -->
+            <article class="cartao-tarefa">
+                <div class="id-tarefa">
+                    <span>ID: 8943</span>
+                </div>
+                <div class="conteudo-tarefa">
+                    <span class="tag tag-visita">AGUARDANDO VISITA</span>
+                    <h2 class="endereco-tarefa">Rua das Palmeiras, 142</h2>
+                    <p class="descricao-tarefa">PODA: Árvore de grande porte caída bloqueando a calçada na Rua...</p>
+                </div>
+                <div class="acoes-tarefa">
+                    <div class="info-agendamento">
+                        <span class="agendamento-label">AGENDADO PARA:</span>
+                        <span class="agendamento-data">19/07/2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cartão 2 -->
+            <article class="cartao-tarefa">
+                <div class="id-tarefa">
+                    <span>ID: 8632</span>
+                </div>
+                <div class="conteudo-tarefa">
+                    <span class="tag tag-relatorio">AGUARDANDO RELATÓRIO</span>
+                    <h2 class="endereco-tarefa">Av. São João, 900</h2>
+                    <p class="descricao-tarefa">Solicitação de plantio de ipê amarelo em calçada pública</p>
+                </div>
+                <div class="acoes-tarefa">
+                    <a href="./acaoFiscal.html"><button class="btn-acao btn-verde">GERAR RELATÓRIO</button></a>
+                </div>
+            </article>
+
+            <!-- Cartão 3 -->
+            <article class="cartao-tarefa">
+                <div class="id-tarefa">
+                    <span>ID: 8623</span>
+                </div>
+                <div class="conteudo-tarefa">
+                    <div class="tag-grupo">
+                        <span class="tag tag-resolvido">RESOLVIDO</span>
+                        <span class="data-resolvido">12 MAI, 09:30</span>
+                    </div>
+                    <h2 class="endereco-tarefa">Rua 21 de Março</h2>
+                    <p class="descricao-tarefa">Erradicação de árvore seca concluída com sucesso.</p>
+                </div>
+                <div class="acoes-tarefa acoes-fim">
+                    <button class="btn-icone"><i class="bi bi-trash"></i></button>
+                    <button class="btn-acao btn-escuro">VISITA REALIZADA</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contatos">
+            <a href="http://"><img src="../../assets/images/icon-face.png" alt="Facebook"></a>
+            <a href="http://"><img src="../../assets/images/icon-insta.png" alt="Instagram"></a>
+
+            <h1> (15) 00000-0000 </h1>
+        </div>
+        <div class="linksmenu">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../servicos.html">Serviços</a></li>
+                <li><a href="../denuncia.html">Denuncie</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="mapa">
+            <img src="../../assets/images/mapa_secretaria.png" alt="Endereço Secretaria do Meio Ambiente">
+        </div>
+    </footer>

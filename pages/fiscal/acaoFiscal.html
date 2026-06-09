@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVV Votorantim - Admin Home</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/acaoFiscal.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="headerNav">
+        <nav class="navbar">
+            <img src="../../assets/images/SAVV_Logo_SemFundo.png" alt="Logo" class="logoNav">
+            <ul>
+                <button class="btnMenuHamburguer"><i class="bi bi-list corPrimaria"></i></button>
+                <li><a href="homeFiscal.html">Painel</a></li>
+                <button class="btn-login"><a href="../../index.html">Sair</a></button>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-acao">
+        <h1 class="titulo-acao">Relatório de visita técnica</h1>
+
+        <form class="form-relatorio">
+            <!-- Primeira linha: Nome e Data -->
+            <div class="linha-form grid-2">
+                <div class="grupo-input">
+                    <label class="label-form">NOME DO FISCAL RESPONSÁVEL PELA VISITA</label>
+                    <input type="text" class="input-form readonly" value="Eng. Roberto da Silva" readonly>
+                </div>
+                <div class="grupo-input">
+                    <label class="label-form">DATA DA VISITA</label>
+                    <input type="text" class="input-form readonly" value="17/06/2026" readonly>
+                </div>
+            </div>
+
+            <!-- Segunda linha: Texto relativo à visita -->
+            <div class="linha-form">
+                <div class="grupo-input">
+                    <label class="label-form">TEXTO RELATIVO À VISITA</label>
+                    <textarea class="textarea-form" rows="6" placeholder="Ex: Foi verificado que ao analisar o solo as raízes..."></textarea>
+                </div>
+            </div>
+
+            <!-- Terceira linha: Veredito -->
+            <div class="linha-form">
+                <label class="label-form">SELECIONE O VEREDITO FINAL DA VISITA</label>
+                <div class="grid-2 botoes-veredito">
+                    <button type="button" class="btn-veredito aprovar">
+                        <i class="bi bi-check-lg icone-grande"></i>
+                        <span>APROVAR AÇÃO À ÁRVORE</span>
+                    </button>
+                    <button type="button" class="btn-veredito negar">
+                        <i class="bi bi-x-lg icone-grande"></i>
+                        <span>NEGAR AÇÃO À ÁRVORE</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quarta linha: Justificativa -->
+            <div class="linha-form">
+                <div class="grupo-input">
+                    <label class="label-form">JUSTIFICAR APROVAÇÃO/NEGAÇÃO DA SOLICITAÇÃO</label>
+                    <textarea class="textarea-form" rows="6" placeholder="Ex: Trata-se de uma espécie nativa que não possibilita o corte..."></textarea>
+                </div>
+            </div>
+
+            <!-- Quinta linha: Submit -->
+            <div class="linha-form">
+                <button type="submit" class="btn-submit">APROVAR E GERAR RELATÓRIO DE VISITA</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="contatos">
+            <a href="http://"><img src="../../assets/images/icon-face.png" alt="Facebook"></a>
+            <a href="http://"><img src="../../assets/images/icon-insta.png" alt="Instagram"></a>
+
+            <h1> (15) 00000-0000 </h1>
+        </div>
+        <div class="linksmenu">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../servicos.html">Serviços</a></li>
+                <li><a href="../denuncia.html">Denuncie</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="mapa">
+            <img src="../../assets/images/mapa_secretaria.png" alt="Endereço Secretaria do Meio Ambiente">
+        </div>
+    </footer>

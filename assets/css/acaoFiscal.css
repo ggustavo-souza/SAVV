@@ -1,0 +1,153 @@
+/* Container Principal */
+.container-acao {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Título da Página */
+.titulo-acao {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 50px;
+    letter-spacing: -1px;
+}
+
+/* Formulário */
+.form-relatorio {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Grids */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Labels e Inputs */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label-form {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-textoSub);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-form {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    outline: none;
+}
+
+/* Inputs Readonly */
+.input-form.readonly {
+    background-color: #e6ecf4; /* Cinza azulado claro da imagem */
+    cursor: default;
+}
+
+/* Textareas */
+.textarea-form {
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    color: #333;
+    resize: vertical;
+    outline: none;
+    font-family: inherit;
+    min-height: 150px;
+}
+
+.textarea-form::placeholder {
+    color: #bbb;
+    font-weight: 500;
+}
+
+.textarea-form:focus {
+    border-color: var(--color-primary);
+}
+
+/* Botões de Veredito */
+.botoes-veredito {
+    margin-top: 15px;
+}
+
+.btn-veredito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    gap: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-veredito:hover {
+    opacity: 0.9;
+}
+
+.btn-veredito span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.icone-grande {
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1;
+}
+
+/* Cores específicas dos botões de veredito */
+.btn-veredito.aprovar {
+    background-color: var(--color-primary); /* Verde escuro */
+}
+
+.btn-veredito.negar {
+    background-color: var(--color-tertiary); /* Azul marinho escuro / Preto */
+}
+
+/* Botão Submit Final */
+.btn-submit {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #032a00;
+}
+
+/* Responsivo básico */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
