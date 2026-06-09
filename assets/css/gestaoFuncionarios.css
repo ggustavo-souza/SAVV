@@ -1,0 +1,150 @@
+/* Container Principal */
+.container-funcionarios {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Cabeçalho */
+.cabecalho-funcionarios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.subtitulo-central {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.titulo-gestao {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -1.5px;
+}
+
+.btn-adicionar {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+}
+
+.btn-adicionar:hover {
+    opacity: 0.9;
+}
+
+/* Abas */
+.abas-funcionarios {
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 40px;
+}
+
+.aba {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #999;
+    padding: 10px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.aba.ativa {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Grade de Funcionários */
+.grade-funcionarios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Cartões */
+.cartao-funcionario {
+    background-color: #fff;
+    border: 1px solid var(--cor-borda-principal);
+    border-radius: 2px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* Tags */
+.tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.tag-gestor-chefe, .tag-gestor {
+    background-color: #e6f9ec;
+    color: #27a354;
+    border: 1px solid #cbf0d8;
+}
+
+.tag-fiscal {
+    background-color: #e8ebf7;
+    color: #4a6ee0;
+    border: 1px solid #d0d7f2;
+}
+
+/* Info do Funcionário */
+.email-funcionario {
+    font-size: 0.85rem;
+    color: var(--color-textoSub);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.nome-funcionario {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+/* Responsividade Básica */
+@media (max-width: 992px) {
+    .grade-funcionarios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho-funcionarios {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .grade-funcionarios {
+        grid-template-columns: 1fr;
+    }
+}
