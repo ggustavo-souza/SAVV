@@ -95,7 +95,7 @@ footer .mapa img{
         justify-content: left;
         align-items: left;
         width: 80%;
-        margin-right: 0em;
+        column-gap: 2em;
     }
 
     footer .linksmenu li {
@@ -108,11 +108,11 @@ footer .mapa img{
     }
 
     footer .contatos img {
-        width: 4em;
+        width: 3em;
     }
 
     footer .contatos h1 {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     footer .mapa {

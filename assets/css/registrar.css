@@ -40,7 +40,7 @@
 
 .card-form h6 {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 2.5em;
     text-align: left;
     width: 100%;
     font-weight: 600;
@@ -113,7 +113,7 @@
     flex: 50%;
 }
 
-.card-form .textoSub {
+.card-form .form-labels {
     margin: 20em 0em 0em 0em;
 }
 
@@ -125,23 +125,48 @@
     border-radius: 5px;
     background-color: #fbfbfb;
     color: rgb(9, 9, 9);
-    margin: 1em 0em 1em 0em;
+    margin: 1em 0em 2em 0em;
 }
 
 @media (max-width: 768px) {
+    .registrar {
+        padding: 3em;
+    }
+
     .card-form {
         border: none;
-        padding: 20px;
+        padding: 2em;
     }
 
     .row {
         flex-direction: column;
     }
 
-    .h1,
-    .h3,
-    .h6 {
-        text-align: center;
-        font-size: 1.5em;
-    }
+    .card-form .tituloPrincipal {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.card-form h3 {
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.6em;
+    color: var(--color-primary);
+    letter-spacing: 0.2em;
+    font-weight: 600;
+}
+
+.card-form .textoSub {
+    margin-top: 0px;
+    margin-bottom: 2.5em;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.7em;
+}
 }
