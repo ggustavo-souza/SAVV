@@ -67,7 +67,7 @@
     border-radius: 4px;
     padding: 25px;
     gap: 30px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .id-tarefa {
@@ -111,7 +111,8 @@
     margin-bottom: 0;
 }
 
-.tag-visita, .tag-relatorio {
+.tag-visita,
+.tag-relatorio {
     border: 1px solid #4a6ee0;
     color: #4a6ee0;
     background: #f8faff;
@@ -210,4 +211,53 @@
     font-size: 1.2rem;
     color: #333;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container-fiscal {
+        padding: 30px 15px;
+    }
+
+    .titulo-gestao {
+        font-size: 2rem;
+    }
+
+    .abas-tarefas {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .cartao-tarefa {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .id-tarefa {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+
+    .acoes-tarefa {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .info-agendamento {
+        text-align: left;
+    }
+
+    .acoes-fim {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-acao {
+        flex-grow: 1;
+        text-align: center;
+    }
 }

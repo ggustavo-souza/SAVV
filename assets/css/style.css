@@ -13,14 +13,14 @@
     --espaçamento-tituloPrincipal: -3%;
     --groçura-tituloPrincipal: 700;
     --tamanho-tituloTerciario: 1.5rem;
-    
+
 
     /* Adicionar variáveis de tamanho de fonte do texto secundário */
     --tamanho-textoSub: 0.9rem;
     --tamanho-textoSub-mobile: 0.8rem;
     --groçura-textoSub: 500;
     --color-textoSub: #808080;
-    
+
 
     /* Variáveis de espaçamento */
     --space-sm: 8px;
@@ -30,7 +30,7 @@
     --space-xxl: 100px;
     --space-especial-statisca: 309px;
     --space-especial-mapa: 230px;
-    
+
 
     /* Variáveis de altura de linha */
     --altura-linha-tituloPrincipal: 1.4;
@@ -51,9 +51,9 @@ body {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .tituloPrincipal {
@@ -62,10 +62,26 @@ img {
     letter-spacing: var(--espaçamento-tituloPrincipal);
     line-height: var(--altura-linha-tituloPrincipal);
 }
+
 .textoSub {
     font-size: var(--tamanho-textoSub);
     margin-top: var(--space-md);
     line-height: var(--altura-linha-textoSub);
     font-weight: var(--groçura-textoSub);
     color: var(--color-textoSub);
+}
+
+/* variáveis ajustadas pras telas do mobile */
+@media (max-width: 768px) {
+    :root {
+        --tamanho-tituloPrincipal: 2rem;
+        --tamanho-subtitulo: 1.5rem;
+        --tamanho-tituloTerciario: 1.2rem;
+        --space-xl: 30px;
+        --space-xxl: 60px;
+    }
+
+    .tituloPrincipal {
+        line-height: 1.2;
+    }
 }

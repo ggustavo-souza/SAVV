@@ -196,3 +196,31 @@
 .btn-aprovar:hover {
     background-color: #032b00;
 }
+
+@media (max-width: 768px) {
+    .container-acoes {
+        margin: var(--space-lg) auto;
+    }
+
+    .cabecalho-detalhes {
+        flex-wrap: wrap;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+    }
+
+    .mapa-ocorrencia {
+        height: 200px;
+    }
+
+    .linha-form {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .btn-aprovar {
+        width: 100%;
+        text-align: center;
+    }
+}
