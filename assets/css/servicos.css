@@ -243,6 +243,20 @@ main {
     gap: 1rem;
 }
 
+.barraCom-valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.valorBarra {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    min-height: 1rem;
+}
+
 .barra1 {
     width: 15px;
     height: 70px;
