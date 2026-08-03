@@ -2,7 +2,7 @@
 # SAVV
 Um website voltado para a população de Votorantim, com o intuito de registrar e monitorar denúncias referentes ao meio ambiente da cidade.
 
-## Arquitetura back-end do sistema
+## Arquitetura do sistema
 
 A ideia do projeto é possuir uma arquitetura preparada para lidar com uma possível explosão de ocorrências, e mesmo assim conseguir armazenar os dados com integridade e de forma sólida. 
 
