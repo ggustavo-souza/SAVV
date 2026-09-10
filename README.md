@@ -6,11 +6,10 @@ Um website voltado para a população de Votorantim, com o intuito de registrar 
 
 A ideia do projeto é possuir uma arquitetura preparada para lidar com uma possível explosão de ocorrências, e mesmo assim conseguir armazenar os dados com integridade e de forma sólida. 
 
-<img width="1045" height="465" alt="image" src="https://github.com/user-attachments/assets/b2637c0c-7914-4fb5-9de4-498f5038e737" />
+<img width="1243" height="453" alt="image" src="https://github.com/user-attachments/assets/912e7e6f-5bee-493f-be05-641274abe93c" />
 
-Como ilustrado na imagem, a ideia é que após a comunicação cliente-servidor, os dados resultantes das ações sejam separados entre dois bancos. <br> <br>
-O <b>PostGIS</b> será usado para armazenar os dados geográficos da aplicação, devido sua robustez e gama de funcionalidades quanto ao quesito georeferênciamento.<br><br>
-Já o restante dos dados será armazenado em um banco <b>PostgreSQL</b>, devido sua robustez e capacidade de processamento.<br> <br>
+Como ilustrado na imagem, a ideia é que após a comunicação cliente-servidor, os dados resultantes das ações sejam armazenados em um banco de dados MySQL, devido sua facilidade de uso, e sua portabilidade simples porém eficaz com dados geográficos. <br> <br>
+
 
 
 
