@@ -16,18 +16,18 @@ export default function Navbar() {
           </li>
           <li>
             <a href="/servicos" className="font-medium lg:text-lg text-secundaria transition-colors hover:opacity-80">
-              Serviços
+              Transparência
             </a>
           </li>
           <li>
             <a href="/denuncie" className="font-medium lg:text-lg text-secundaria transition-colors hover:opacity-80">
-              Denuncie
+              Serviço
             </a>
           </li>
           <li>
             <a
               href="/login"
-              className="font-medium px-6 py-2 lg:text-lg rounded-sm shadow-sm bg-secundaria text-primaria transition-colors hover:opacity-90"
+              className="font-medium px-6 py-2 lg:text-lg rounded-xs shadow-sm bg-secundaria text-primaria transition-colors hover:opacity-90"
             >
               Login
             </a>
