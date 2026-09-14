@@ -2,10 +2,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primaria: #F1F5F9;
+  --color-primaria: #fdfdfd;
   --color-secundaria: #054100;
-  --color-cinza: #9D9D9D;
-  --color-preta: #000001;
+  --color-preta: #0F172A;
+  --color-success: #8cd29c;
+  --color-error: #dc3545;
+  --color-warning: #ffc107;
 }
 
 * {
