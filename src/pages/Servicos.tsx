@@ -4,5 +4,5 @@ export default function Servicos() {
             <h1 className="text-3xl font-bold text-secundaria">Serviços</h1>
             <p className="text-lg text-secundaria">Esta página ainda não foi implementada.</p>
         </div>
-    );
+    )
 }
