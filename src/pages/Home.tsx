@@ -1,6 +1,9 @@
 import Navbar from "../components/Navbar"
+import { APIProvider, Map } from '@vis.gl/react-google-maps';
 
 export default function Home() {
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
     return (
         <>
             <Navbar />
@@ -27,8 +30,16 @@ export default function Home() {
                 </div>
             </section>
             <article className="bg-gray-300 text-center py-20 mx-16 ">
-                <p>div do mapa</p>
+                <div className="w-full h-[450px]">
+                    <APIProvider apiKey={apiKey}>
+                        <Map 
+                            defaultCenter={{ lat: -23.5505, lng: -46.6333 }} 
+                            defaultZoom={12} 
+                        />
+                    </APIProvider>
+                </div>
             </article>
+            
         </>
     )
 }
