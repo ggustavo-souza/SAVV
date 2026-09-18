@@ -26,6 +26,9 @@ export default function Home() {
                     <h1 className="text-8xl mt-2 font-extrabold text-center text-secundaria">150</h1>
                 </div>
             </section>
+            <article className="bg-gray-300 text-center py-20 mx-16 ">
+                <p>div do mapa</p>
+            </article>
         </>
     )
 }
