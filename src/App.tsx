@@ -1,5 +1,6 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom"
 import { lazy, Suspense } from "react"
+import SpinnerCarregamento from "./components/SpinnerCarregamento";
 
 const Home = lazy(() => import("./pages/Home"));
 const SemPagina = lazy(() => import("./pages/SemPagina"));
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <Suspense fallback={<div className="text-center mt-10">Carregando...</div>}>
+      <Suspense fallback={<div className=""><SpinnerCarregamento /></div>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/transparencia" element={<Transparencia />} />
