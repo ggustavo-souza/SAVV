@@ -91,13 +91,13 @@ export default function Transparencia() {
     return (
         <>
             <Navbar />
-            <div className="w-full h-screen flex flex-row mt-12 justify-between gap-6">
+            <div className="w-full h-screen flex flex-row my-20 justify-between gap-6">
                 <article className="flex flex-col w-1/2 text-start ms-12 gap-3">
                     <p className="font-bold text-secundaria">NOSSA ATUAÇÃO</p>
                     <h1 className="text-5xl font-bold text-black">Transparência de Dados</h1>
-                    <p className="text-md font-light text-secundaria">Zelamos pela transparência e integridade em todas as nossas operações.</p>
+                    <p className="text-md font-light text-secundaria">Zelamos pela transparência e integridade dos nossos dados em todas as nossas operações.</p>
                 </article>
-                <aside className="w-1/2 h-3/4 border bg-gray-200 flex items-center justify-center me-10 mt-10   ">
+                <aside className="w-1/2 h-3/4 border bg-gray-200 flex items-center justify-center me-10">
                     <p>div do mapa</p>
                 </aside>
             </div>
@@ -111,7 +111,6 @@ export default function Transparencia() {
                         <Bar data={data} options={options} />
                     </div>
                 </div>
-
             </section>
         </>
     );
