@@ -1,25 +1,29 @@
-import { Route, Routes, BrowserRouter as Router }from "react-router-dom"
-import Home from "./pages/Home"
-import SemPagina from "./pages/SemPagina"
-import Transparencia from "./pages/Transparencia"
-import Servicos from "./pages/Servicos"
-import Login from "./pages/Login"
-import Registrar from "./pages/Registrar"
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom"
+import { lazy, Suspense } from "react"
+
+const Home = lazy(() => import("./pages/Home"));
+const SemPagina = lazy(() => import("./pages/SemPagina"));
+const Transparencia = lazy(() => import("./pages/Transparencia"));
+const Servicos = lazy(() => import("./pages/Servicos"));
+const Login = lazy(() => import("./pages/Login"));
+const Registrar = lazy(() => import("./pages/Registrar"));
 
 function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/transparencia" element={<Transparencia />} />
-        <Route path="/denuncia" element={<Servicos />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/registrar" element={<Registrar />} />
-        
-        {/* Aqui em baixo é a rota pra quando o usuário tentar acessar uma página que não existe */}
-        <Route path="*" element={<SemPagina />} />
-      </Routes>
+      <Suspense fallback={<div className="text-center mt-10">Carregando...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/transparencia" element={<Transparencia />} />
+          <Route path="/servico" element={<Servicos />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registrar" element={<Registrar />} />
+
+          {/* Aqui em baixo é a rota pra quando o usuário tentar acessar uma página que não existe */}
+          <Route path="*" element={<SemPagina />} />
+        </Routes>
+      </Suspense>
     </Router>
   )
 }
