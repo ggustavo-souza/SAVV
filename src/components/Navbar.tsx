@@ -15,12 +15,12 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="/servicos" className="font-medium lg:text-md xl:text-lg text-secundaria transition-colors hover:opacity-80">
+            <a href="/transparencia" className="font-medium lg:text-md xl:text-lg text-secundaria transition-colors hover:opacity-80">
               Transparência
             </a>
           </li>
           <li>
-            <a href="/denuncie" className="font-medium lg:text-md xl:text-lg text-secundaria transition-colors hover:opacity-80">
+            <a href="/servico" className="font-medium lg:text-md xl:text-lg text-secundaria transition-colors hover:opacity-80">
               Serviço
             </a>
           </li>
