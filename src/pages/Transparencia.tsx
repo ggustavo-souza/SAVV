@@ -48,7 +48,7 @@ export default function Transparencia() {
             x: {
                 grid: { display: false }, // Remove as linhas verticais
                 ticks: { font: { size: 14, family: 'Poppins' } }, // Fonte do eixo X
-                border: { display: false }, // Remove a linha da base
+                border: { display: true }, // Remove a linha da base
             },
             y: {
                 display: false, // Esconde o eixo Y inteiro para bater com o layout
@@ -75,7 +75,7 @@ export default function Transparencia() {
     // Os dados dinâmicos recebidos via props (da API)
     const data = {
         labels: dadosApi.map(item => item.mes), // pega os meses do array de dados
-        
+
         datasets: [
             {
                 data: dadosApi.map(item => item.valor), // pega os valores do array de dados
@@ -101,13 +101,18 @@ export default function Transparencia() {
                     <p>div do mapa</p>
                 </aside>
             </div>
-            <div>
+            <section className="my-10">
                 {/* {Div dos gráficos} */}
-                <div style={{ height: '250px', width: '100%' }}>
-                    <Bar data={data} options={options} />
+                <div className="w-full h-fit flex flex-row items-center justify-center gap-6 mt-10">
+                    <h1 className="text-4xl w-fit font-bold text-black mb-4 border-b-3">GRÁFICOS E DADOS</h1>
+                </div>
+                <div className="h-full flex flex-row ms-10 gap-6 mt-10">
+                    <div className="w-1/2 h-96 flex items-center justify-center shadow-lg py-4">
+                        <Bar data={data} options={options} />
+                    </div>
                 </div>
 
-            </div>
+            </section>
         </>
     );
 }
