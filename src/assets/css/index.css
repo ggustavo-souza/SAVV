@@ -19,3 +19,30 @@ body {
   background-color: var(--color-primaria);
   color: var(--color-preta);
 }
+
+.checkboxSavv {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%; 
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.checkboxSavv:checked {
+    border-color: #a5d6a7; 
+}
+
+.checkboxSavv:checked::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #1b5e20;
+    border-radius: 50%;
+}

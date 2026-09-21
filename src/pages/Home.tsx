@@ -37,12 +37,26 @@ export default function Home() {
                     <h1 className="text-8xl mt-2 font-extrabold text-center text-secundaria">150</h1>
                 </div>
             </section>
-            <article className="bg-gray-300 text-center py-20 mx-16 ">
-                <div className="w-full h-[450px]">
+            <article className="flex flex-row mx-16 my-6 border border-gray-300 rounded-sm">
+                <div className="w-3/4 h-130 z-10">
                     <MapaExibicao marcadores={mockMarcadores} />
                 </div>
+                <aside className="w-1/4 self-center">
+                    <div className="flex flex-col px-8">
+                        <h1 className="border-b border-gray-400 font-semibold mb-6 pb-2">PARÂMETROS DE EXIBIÇÃO</h1>
+                        <div className="gap-3 flex-col flex">
+                            <div className="flex flex-row justify-between">
+                                <p>Poda de Árvores</p>
+                                <input type="checkbox" checked className="w-4 accent-secundaria checkboxSavv"></input>
+                            </div>
+                            <div className="flex flex-row justify-between">
+                                <p>Erradicação</p>
+                                <input type="checkbox" checked className="w-4 accent-secundaria checkboxSavv" />
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </article>
-
         </>
     )
 }

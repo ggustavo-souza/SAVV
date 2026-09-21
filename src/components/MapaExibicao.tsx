@@ -1,4 +1,4 @@
-import { APIProvider, Map, useMap, Marker } from "@vis.gl/react-google-maps"
+import { APIProvider, Map, useMap, Marker, Pin, AdvancedMarker } from "@vis.gl/react-google-maps"
 import { useEffect } from "react";
 import type { MarcadorServico } from "../types/Servico";
 
@@ -51,10 +51,12 @@ export default function MapaExibicao({marcadores}: MapaExibicaoProps) {
                 disableDefaultUI={true}
                 keyboardShortcuts={false}
                 styles={esconderEstabelecimento}
+                //Colocar o mapId depois
             >
                 <MapRestrictor />
                 
                 {marcadores.map((marcador) => (
+                    //mudar pra AdvancedMarker depois que pegar o mapId
                     <Marker 
                         key={marcador.id}
                         position={marcador.coordenadas}
