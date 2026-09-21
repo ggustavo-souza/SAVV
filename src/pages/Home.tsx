@@ -1,8 +1,16 @@
 import Navbar from "../components/Navbar"
-import { APIProvider, Map } from '@vis.gl/react-google-maps';
+import MapaExibicao from "../components/MapaExibicao";
+import { type MarcadorServico } from "../types/Servico";
 
 export default function Home() {
-    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
+    const mockMarcadores: MarcadorServico[] = [
+        { id: 1, situacao: "pendente", coordenadas: { lat: -23.5390, lng: -47.4450 } },
+        { id: 2, situacao: "concluida", coordenadas: { lat: -23.5520, lng: -47.4370 } },
+        { id: 3, situacao: "negada", coordenadas: { lat: -23.5420, lng: -47.4580 } },
+        { id: 4, situacao: "pendente", coordenadas: { lat: -23.5610, lng: -47.4310 } },
+        { id: 5, situacao: "concluida", coordenadas: { lat: -23.5350, lng: -47.4350 } },
+    ];
 
     return (
         <>
@@ -31,15 +39,10 @@ export default function Home() {
             </section>
             <article className="bg-gray-300 text-center py-20 mx-16 ">
                 <div className="w-full h-[450px]">
-                    <APIProvider apiKey={apiKey}>
-                        <Map 
-                            defaultCenter={{ lat: -23.5505, lng: -46.6333 }} 
-                            defaultZoom={12} 
-                        />
-                    </APIProvider>
+                    <MapaExibicao marcadores={mockMarcadores} />
                 </div>
             </article>
-            
+
         </>
     )
 }
