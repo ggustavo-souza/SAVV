@@ -14,17 +14,16 @@ export default function GraficoPizza({dadosGrafico}: GraficoPizzaProps) {
     datasets: [
       {
         label: 'Votes',
-        
         data: dadosGrafico,
         backgroundColor: [
-          'rgba(5, 65, 0)',
-          'rgba(5, 100, 60)',
-          'rgba(20, 150, 80)',
+          '#f44336',
+          '#fbc02d',
+          '#4caf50',
         ],
         borderColor: [
-          'rgba(5, 65, 0)',
-          'rgba(140, 210, 156)',
-          'rgba(80, 190, 156)',
+          '#f44336',
+          '#fbc02d',
+          '#4caf50',
         ],
         borderWidth: 1,
       },

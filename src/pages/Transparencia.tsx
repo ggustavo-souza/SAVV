@@ -65,7 +65,7 @@ export default function Transparencia() {
                                     <p className="text-gray-400 font-semibold">PERFORMANCE SEMESTRAL</p>
                                     <h2 className="font-bold text-2xl">Denúncias Resolvidas (2026)</h2>
                                 </div>
-                                <button className="flex flex-row font-semibold text-sm items-center px-3 rounded-sm bg-secundaria text-primaria">2026 <BsList /></button>
+                                <button className="flex self-end items-center py-2 px-3 flex-row font-semibold text-xs rounded-sm bg-secundaria text-primaria">2026 <BsList /></button>
                             </div>
                             <div className="flex flex-row justify-between mt-6">
                                 <div className="">
@@ -75,10 +75,6 @@ export default function Transparencia() {
                                 <div>
                                     <p className="text-gray-400 font-bold">Eficiência (Média)</p>
                                     <h2 className="text-2xl font-bold">{`${eficienciaDenuncias.toFixed(2)}%`}</h2>
-                                </div>
-                                <div>
-                                    <p className="text-gray-400 font-bold">Total Resolvido</p>
-                                    <h2>numero</h2>
                                 </div>
                                 <div>
                                     <p className="text-gray-400 font-bold">Mês de Pico</p>
