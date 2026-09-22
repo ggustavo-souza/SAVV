@@ -9,7 +9,7 @@ export default function Home() {
         { id: 2, situacao: "concluida", categoria: "erradicacao" , coordenadas: { lat: -23.5520, lng: -47.4370 } },
         { id: 3, situacao: "negada", categoria: "erradicacao" , coordenadas: { lat: -23.5420, lng: -47.4580 } },
         { id: 4, situacao: "pendente", categoria: "plantio" , coordenadas: { lat: -23.5610, lng: -47.4310 } },
-        { id: 5, situacao: "concluida", categoria: "poda" , coordenadas: { lat: -23.5350, lng: -47.4350 } },
+        { id: 5, situacao: "concluida", categoria: "rocagem" , coordenadas: { lat: -23.5350, lng: -47.4350 } },
     ]
 
     return (
