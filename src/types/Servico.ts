@@ -7,5 +7,6 @@
 export type MarcadorServico = {
     id: number;
     situacao: "pendente" | "concluida" | "negada";
+    categoria: "poda" | "erradicacao" | "plantio"
     coordenadas: { lat: number; lng: number };
 };
