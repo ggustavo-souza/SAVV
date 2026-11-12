@@ -1,0 +1,45 @@
+{
+  "name": "savv-next",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "drizzle:push": "drizzle-kit push && tsx --env-file=.env lib/db/seed.ts",
+    "drizzle:seed": "tsx --env-file=.env lib/db/seed.ts",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate",
+    "drizzle:run": "tsx --env-file=.env lib/db/index.ts" 
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "drizzle-orm": "^0.45.3",
+    "jose": "^6.2.12",
+    "leaflet": "^1.9.4",
+    "mysql2": "^3.24.4",
+    "next": "^16.4.2",
+    "react": "19.2.8",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "19.2.8",
+    "react-icons": "^5.7.0",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^9",
+    "eslint-config-next": "^16.4.2",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}
