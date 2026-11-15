@@ -1,8 +1,9 @@
 'use server'
 
-import { db } from "@/lib/db";
+import { db, executarComFallback } from "@/lib/db";
 import { servicos } from "@/lib/db/schema";
 import { obterSessao } from "@/services/AuthCheck";
+import { adicionarSolicitacaoMockada } from "@/lib/mocks/dadosMockados";
 import { redirect } from "next/navigation";
 import path from "path";
 import fs from "fs";
@@ -55,28 +56,46 @@ export async function criarServicoAction(_prevState: CriarServicoState, formData
     const extensao = path.extname(imagem.name).toLowerCase() || '.jpg';
     const nomeArquivo = `${crypto.randomUUID()}_${Date.now()}${extensao}`;
 
-    const pastaDestino = path.join(process.cwd(), 'public', 'repository');
-    await fs.promises.mkdir(pastaDestino, { recursive: true });
+    try {
+        const pastaDestino = path.join(process.cwd(), 'public', 'repository');
+        await fs.promises.mkdir(pastaDestino, { recursive: true });
 
-    const buffer = Buffer.from(await imagem.arrayBuffer());
-    const caminhoArquivo = path.join(pastaDestino, nomeArquivo);
-    await fs.promises.writeFile(caminhoArquivo, buffer);
-
+        const buffer = Buffer.from(await imagem.arrayBuffer());
+        const caminhoArquivo = path.join(pastaDestino, nomeArquivo);
+        await fs.promises.writeFile(caminhoArquivo, buffer);
+    } catch (fsError) {
+        console.warn('⚠️ [SAVV] Não foi possível salvar o arquivo de imagem em disco:', fsError);
+    }
 
     try {
-        await db.insert(servicos).values({
-            observacao,
-            endereco,
-            lat,
-            lng,
-            imagem: nomeArquivo,
-            status: 'pendente',
-            categoria,
-            idFiscal: null,
-            data: new Date(),
-            idUsuario: sessao.userId
-        });
-
+        await executarComFallback(
+            async () => {
+                await db.insert(servicos).values({
+                    observacao,
+                    endereco,
+                    lat,
+                    lng,
+                    imagem: nomeArquivo,
+                    status: 'pendente',
+                    categoria,
+                    idFiscal: null,
+                    data: new Date(),
+                    idUsuario: sessao.userId,
+                });
+            },
+            () => {
+                adicionarSolicitacaoMockada({
+                    observacao,
+                    endereco,
+                    lat,
+                    lng,
+                    imagem: nomeArquivo,
+                    categoria,
+                    idUsuario: sessao.userId,
+                });
+                console.info('🔄 [SAVV] Solicitação adicionada à lista simulada em memória.');
+            }
+        );
     } catch (e) {
         if (e instanceof Error) {
             console.error("Erro ao inserir servico:", e.message);

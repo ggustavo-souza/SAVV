@@ -1,7 +1,8 @@
 'use server'
 
-import { db } from "@/lib/db";
+import { db, executarComFallback } from "@/lib/db";
 import { servicos } from "@/lib/db/schema";
+import { obterSolicitacoesMockadas } from "@/lib/mocks/dadosMockados";
 
 export type BairroSolicitacao = {
     bairro: string;
@@ -59,41 +60,51 @@ export async function extrairBairroDeEndereco(endereco: string): Promise<string>
     return formatarNomeBairro(semCep);
 }
 
-export async function getBairrosComMaisSolicitacoes(limite: number = 3): Promise<BairroSolicitacao[]> {
-    try {
-        const registros = await db
-            .select({
-                endereco: servicos.endereco,
-            })
-            .from(servicos);
-
-        if (!registros || registros.length === 0) {
-            return [];
-        }
-
-        const contagemPorBairro: Record<string, number> = {};
-        let totalValidos = 0;
-
-        for (const item of registros) {
-            if (!item.endereco) continue;
-            const bairro = await extrairBairroDeEndereco(item.endereco);
-            if (!bairro) continue;
-
-            contagemPorBairro[bairro] = (contagemPorBairro[bairro] || 0) + 1;
-            totalValidos++;
-        }
-
-        const ordenados = Object.entries(contagemPorBairro)
-            .map(([bairro, total]) => ({
-                bairro,
-                total,
-                porcentagem: totalValidos > 0 ? Math.round((total / totalValidos) * 100) : 0,
-            }))
-            .sort((a, b) => b.total - a.total || a.bairro.localeCompare(b.bairro));
-
-        return ordenados.slice(0, limite);
-    } catch (error) {
-        console.error("Erro ao buscar bairros com mais solicitações:", error);
+async function processarBairrosDeEnderecos(
+    registros: { endereco: string | null }[],
+    limite = 3
+): Promise<BairroSolicitacao[]> {
+    if (!registros || registros.length === 0) {
         return [];
     }
+
+    const contagemPorBairro: Record<string, number> = {};
+    let totalValidos = 0;
+
+    for (const item of registros) {
+        if (!item.endereco) continue;
+        const bairro = await extrairBairroDeEndereco(item.endereco);
+        if (!bairro) continue;
+
+        contagemPorBairro[bairro] = (contagemPorBairro[bairro] || 0) + 1;
+        totalValidos++;
+    }
+
+    const ordenados = Object.entries(contagemPorBairro)
+        .map(([bairro, total]) => ({
+            bairro,
+            total,
+            porcentagem: totalValidos > 0 ? Math.round((total / totalValidos) * 100) : 0,
+        }))
+        .sort((a, b) => b.total - a.total || a.bairro.localeCompare(b.bairro));
+
+    return ordenados.slice(0, limite);
+}
+
+export async function getBairrosComMaisSolicitacoes(limite: number = 3): Promise<BairroSolicitacao[]> {
+    return await executarComFallback(
+        async () => {
+            const registros = await db
+                .select({
+                    endereco: servicos.endereco,
+                })
+                .from(servicos);
+
+            return await processarBairrosDeEnderecos(registros, limite);
+        },
+        async () => {
+            const mockadas = obterSolicitacoesMockadas();
+            return await processarBairrosDeEnderecos(mockadas, limite);
+        }
+    );
 }

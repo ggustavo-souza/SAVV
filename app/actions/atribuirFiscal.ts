@@ -1,8 +1,9 @@
 'use server'
 
-import { db } from "@/lib/db";
+import { db, executarComFallback } from "@/lib/db";
 import { servicos, historico } from "@/lib/db/schema";
 import { obterSessao } from "@/services/AuthCheck";
+import { atualizarStatusSolicitacaoMockada } from "@/lib/mocks/dadosMockados";
 import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
@@ -37,24 +38,30 @@ export async function atribuirFiscalAction(
     }
 
     try {
-        await db.transaction(async (tx) => {
-            // Atualiza status para em_analise (representando em andamento / em análise pelo fiscal) e define o fiscal
-            await tx
-                .update(servicos)
-                .set({
-                    idFiscal: idFiscal,
-                    status: 'em_analise',
-                })
-                .where(eq(servicos.protocolo, protocolo));
+        await executarComFallback(
+            async () => {
+                await db.transaction(async (tx) => {
+                    await tx
+                        .update(servicos)
+                        .set({
+                            idFiscal: idFiscal,
+                            status: 'em_analise',
+                        })
+                        .where(eq(servicos.protocolo, protocolo));
 
-            // Registra auditoria no histórico
-            await tx.insert(historico).values({
-                protocolo,
-                idFuncionario: sessao.userId,
-                atualizacao: `Solicitação aprovada para vistoria e atribuída ao fiscal #${idFiscal}. Status alterado para 'em_analise'.`,
-                data: new Date(),
-            });
-        });
+                    await tx.insert(historico).values({
+                        protocolo,
+                        idFuncionario: sessao.userId,
+                        atualizacao: `Solicitação aprovada para vistoria e atribuída ao fiscal #${idFiscal}. Status alterado para 'em_analise'.`,
+                        data: new Date(),
+                    });
+                });
+            },
+            () => {
+                atualizarStatusSolicitacaoMockada(protocolo, 'em_analise', idFiscal);
+                console.info(`🔄 [SAVV] Fiscal #${idFiscal} atribuído à solicitação #${protocolo} (modo simulação).`);
+            }
+        );
 
         revalidatePath(`/admin/gerente/solicitacoes/${protocolo}`);
         revalidatePath('/admin/gerente/solicitacoes');

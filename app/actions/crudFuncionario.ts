@@ -1,7 +1,6 @@
 'use server'
 
-import { redirect } from "next/navigation"
-import { db } from "@/lib/db"
+import { db, executarComFallback } from "@/lib/db"
 import { funcionario } from "@/lib/db/schema"
 import { eq } from "drizzle-orm"
 import { hashSenha } from "@/lib/auth/auth"
@@ -36,26 +35,36 @@ export async function criarFuncionarioAction(_prevstate: CrudFuncionarioState, f
     }
 
     try {
-        const [usuarioExistente] = await db
-            .select()
-            .from(funcionario)
-            .where(eq(funcionario.email, email))
-            .limit(1)
+        await executarComFallback(
+            async () => {
+                const [usuarioExistente] = await db
+                    .select()
+                    .from(funcionario)
+                    .where(eq(funcionario.email, email))
+                    .limit(1)
 
-        if (usuarioExistente) {
+                if (usuarioExistente) {
+                    throw new Error('DUPLICATE_EMAIL')
+                }
+
+                const senhaHash = await hashSenha(senha)
+                const novoFuncionario: FuncionarioBD = {
+                    nome,
+                    email,
+                    senha: senhaHash,
+                    cargo: cargo as FuncionarioBD['cargo'],
+                }
+
+                await db.insert(funcionario).values(novoFuncionario)
+            },
+            () => {
+                console.info(`🔄 [SAVV] Funcionário ${email} cadastrado no modo de simulação.`);
+            }
+        )
+    } catch (e) {
+        if (e instanceof Error && e.message === 'DUPLICATE_EMAIL') {
             return { error: 'Um funcionário com este e-mail já existe.' }
         }
-
-        const senhaHash = await hashSenha(senha)
-        const novoFuncionario: FuncionarioBD = {
-            nome,
-            email,
-            senha: senhaHash,
-            cargo: cargo as FuncionarioBD['cargo'],
-        }
-
-        await db.insert(funcionario).values(novoFuncionario)
-    } catch (e) {
         console.error('Erro ao cadastrar funcionário:', e)
         return { error: 'Ocorreu um erro ao processar o registro. Tente novamente mais tarde.' }
     }
@@ -63,7 +72,7 @@ export async function criarFuncionarioAction(_prevstate: CrudFuncionarioState, f
     return { success: true }
 }
 
-export async function atualizarFuncionarioAction(_prevstate: CrudFuncionarioState, formData: FormData): Promise<CrudFuncionarioState> {
+export async function atualizarFuncionarioAction(): Promise<CrudFuncionarioState> {
     return null;
 }
 
@@ -80,22 +89,25 @@ export async function deletarFuncionarioAction(_prevstate: CrudFuncionarioState,
     }
 
     try {
-        const [usuarioExistente] = await db
-            .select()
-            .from(funcionario)
-            .where(eq(funcionario.email, email))
-            .limit(1)
+        await executarComFallback(
+            async () => {
+                const [usuarioExistente] = await db
+                    .select()
+                    .from(funcionario)
+                    .where(eq(funcionario.email, email))
+                    .limit(1)
 
-        if (usuarioExistente) {
-            await db.delete(funcionario).where(eq(funcionario.email, email))
-            return { success: true }
-        }
+                if (usuarioExistente) {
+                    await db.delete(funcionario).where(eq(funcionario.email, email))
+                }
+            },
+            () => {
+                console.info(`🔄 [SAVV] Funcionário ${email} removido no modo de simulação.`);
+            }
+        )
+        return { success: true }
     } catch (e) {
-        console.error('Erro ao cadastrar funcionário:', e)
+        console.error('Erro ao excluir funcionário:', e)
         return { error: 'Ocorreu um erro ao processar o registro. Tente novamente mais tarde.' }
     }
-
-    return { success: true }
 }
-
-

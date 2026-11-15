@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 import { jwtVerify } from 'jose';
-import { db } from '../lib/db';
+import { db, executarComFallback } from '../lib/db';
 import { usuarios, funcionario } from '../lib/db/schema';
 import { eq } from 'drizzle-orm';
 
@@ -21,7 +21,23 @@ export async function checarAutenticacao() {
 
         // Funcionários são armazenados em tabela diferente
         if (cargo) {
-            const [func] = await db.select().from(funcionario).where(eq(funcionario.idFuncionario, userId)).limit(1)
+            const func = await executarComFallback(
+                async () => {
+                    const [registro] = await db.select().from(funcionario).where(eq(funcionario.idFuncionario, userId)).limit(1)
+                    return registro ?? null;
+                },
+                () => {
+                    const nomePadrao = cargo === 'diretor' ? 'Gustavo Souza' : cargo === 'fiscal' ? 'Eng. Gustavo' : 'Gerente Meio Ambiente';
+                    return {
+                        idFuncionario: userId,
+                        nome: nomePadrao,
+                        email: cargo === 'fiscal' ? 'gustavo@email.com' : 'gustavo.oliveirapr06@gmail.com',
+                        dataCadastro: new Date(),
+                        senha: '',
+                        cargo: cargo as "diretor" | "gerente" | "fiscal"
+                    };
+                }
+            );
 
             if (!func)
                 return false
@@ -29,7 +45,21 @@ export async function checarAutenticacao() {
             return { user: func, cargo }
         }
 
-        const [user] = await db.select().from(usuarios).where(eq(usuarios.idUsuario, userId)).limit(1)
+        const user = await executarComFallback(
+            async () => {
+                const [registro] = await db.select().from(usuarios).where(eq(usuarios.idUsuario, userId)).limit(1)
+                return registro ?? null;
+            },
+            () => {
+                return {
+                    idUsuario: userId,
+                    nome: 'Gustavo Souza',
+                    email: 'gustavo.oliveirapr06@gmail.com',
+                    foto: 'Sem_imagem.jpg',
+                    senha: ''
+                };
+            }
+        );
 
         if (!user)
             return false
@@ -43,7 +73,7 @@ export async function checarAutenticacao() {
     }
 }
 
-// apenas verifica o token e devolver o userId junto do cargo do usuário se tiver
+// apenas verifica o token e devolve o userId junto do cargo do usuário se tiver
 export async function obterSessao() {
     const cookiesSessao = await cookies();
     const token = cookiesSessao.get('session')?.value;
@@ -57,9 +87,9 @@ export async function obterSessao() {
 
         if (!payload.userId) {
             return null;
-        };
+        }
 
-        if(payload.exp && Date.now() >= payload.exp * 1000) {
+        if (payload.exp && Date.now() >= payload.exp * 1000) {
             cookiesSessao.delete('session');
             return null;
         }
@@ -67,9 +97,18 @@ export async function obterSessao() {
         const userId = payload.userId as number;
         const cargo = payload.cargo as string | null;
 
-        // Funcionários são armazenados em tabela diferente
         if (cargo) {
-            const [func] = await db.select().from(funcionario).where(eq(funcionario.idFuncionario, userId)).limit(1)
+            const func = await executarComFallback(
+                async () => {
+                    const [registro] = await db.select().from(funcionario).where(eq(funcionario.idFuncionario, userId)).limit(1)
+                    return registro ?? null;
+                },
+                () => ({
+                    idFuncionario: userId,
+                    nome: 'Funcionario Simulado',
+                    cargo,
+                })
+            );
 
             if (!func) {
                 cookiesSessao.delete('session');
@@ -79,9 +118,18 @@ export async function obterSessao() {
             return { userId, cargo };
         }
 
-        const [user] = await db.select().from(usuarios).where(eq(usuarios.idUsuario, userId)).limit(1)
+        const user = await executarComFallback(
+            async () => {
+                const [registro] = await db.select().from(usuarios).where(eq(usuarios.idUsuario, userId)).limit(1)
+                return registro ?? null;
+            },
+            () => ({
+                idUsuario: userId,
+                nome: 'Usuario Simulado',
+            })
+        );
 
-        if(!user){
+        if (!user) {
             cookiesSessao.delete('session');
             return null;
         }

@@ -1,6 +1,6 @@
 'use server'
 
-import { db } from "@/lib/db";
+import { db, executarComFallback } from "@/lib/db";
 import { usuarios } from "@/lib/db/schema";
 import { obterSessao } from "@/services/AuthCheck";
 import { eq } from "drizzle-orm";
@@ -44,17 +44,28 @@ export async function atualizarFotoAction(
         const extensao = path.extname(foto.name).toLowerCase() || '.jpg';
         const nomeArquivo = `perfil_${sessao.userId}_${Date.now()}${extensao}`;
 
-        const pastaDestino = path.join(process.cwd(), 'public', 'repository');
-        await fs.promises.mkdir(pastaDestino, { recursive: true });
+        try {
+            const pastaDestino = path.join(process.cwd(), 'public', 'repository');
+            await fs.promises.mkdir(pastaDestino, { recursive: true });
 
-        const buffer = Buffer.from(await foto.arrayBuffer());
-        const caminhoArquivo = path.join(pastaDestino, nomeArquivo);
-        await fs.promises.writeFile(caminhoArquivo, buffer);
+            const buffer = Buffer.from(await foto.arrayBuffer());
+            const caminhoArquivo = path.join(pastaDestino, nomeArquivo);
+            await fs.promises.writeFile(caminhoArquivo, buffer);
+        } catch (fsErr) {
+            console.warn('⚠️ [SAVV] Não foi possível salvar o arquivo de foto em disco:', fsErr);
+        }
 
-        await db
-            .update(usuarios)
-            .set({ foto: nomeArquivo })
-            .where(eq(usuarios.idUsuario, sessao.userId));
+        await executarComFallback(
+            async () => {
+                await db
+                    .update(usuarios)
+                    .set({ foto: nomeArquivo })
+                    .where(eq(usuarios.idUsuario, sessao.userId));
+            },
+            () => {
+                console.info(`🔄 [SAVV] Foto de perfil atualizada no modo de simulação.`);
+            }
+        );
 
         revalidatePath('/minhaconta');
 

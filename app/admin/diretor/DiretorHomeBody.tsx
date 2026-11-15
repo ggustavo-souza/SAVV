@@ -27,8 +27,19 @@ export default function DiretorHomeBody() {
     }, [])
 
     useEffect(() => {
-        carregarFuncionarios()
-    }, [carregarFuncionarios])
+        let montado = true;
+        (async () => {
+            try {
+                const lista = await getFuncionarios()
+                if (montado) setFuncionarios(lista)
+            } catch (e) {
+                console.error('Erro ao carregar funcionários:', e)
+            } finally {
+                if (montado) setCarregando(false)
+            }
+        })();
+        return () => { montado = false; }
+    }, [])
 
     const formatarCargo = (cargo: string) => {
         const cargos: Record<string, string> = {

@@ -1,6 +1,6 @@
 'use server'
 
-import { db } from "@/lib/db"
+import { db, executarComFallback } from "@/lib/db"
 import { eq } from "drizzle-orm"
 import { usuarios } from "@/lib/db/schema"
 import { hashSenha } from "@/lib/auth/auth"
@@ -43,25 +43,35 @@ export async function registerAction(
     }
 
     try {
-        const [usuarioExistente] = await db
-            .select()
-            .from(usuarios)
-            .where(eq(usuarios.email, email))
-            .limit(1)
+        await executarComFallback(
+            async () => {
+                const [usuarioExistente] = await db
+                    .select()
+                    .from(usuarios)
+                    .where(eq(usuarios.email, email))
+                    .limit(1)
 
-        if (usuarioExistente) {
+                if (usuarioExistente) {
+                    throw new Error('DUPLICATE_EMAIL')
+                }
+
+                const senhaHash = await hashSenha(senha)
+                const novoUsuario: UsuarioBD = {
+                    nome,
+                    email,
+                    senha: senhaHash
+                }
+
+                await db.insert(usuarios).values(novoUsuario)
+            },
+            () => {
+                console.info(`🔄 [SAVV] Usuário ${email} registrado no modo de simulação.`);
+            }
+        )
+    } catch (e) {
+        if (e instanceof Error && e.message === 'DUPLICATE_EMAIL') {
             return { error: 'Um usuário com este e-mail já existe.' }
         }
-
-        const senhaHash = await hashSenha(senha)
-        const novoUsuario: UsuarioBD = {
-            nome,
-            email,
-            senha: senhaHash
-        }
-
-        await db.insert(usuarios).values(novoUsuario)
-    } catch (e) {
         console.error('Erro ao cadastrar usuário:', e)
         return { error: 'Ocorreu um erro ao processar o registro. Tente novamente mais tarde.' }
     }

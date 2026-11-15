@@ -1,10 +1,13 @@
 'use server'
 
 import { obterSessao } from "@/services/AuthCheck";
-import { db } from "@/lib/db";
+import { db, executarComFallback } from "@/lib/db";
 import { eq } from "drizzle-orm";
-import { servicos } from "@/lib/db/schema";
-import { historico } from "@/lib/db/schema";
+import { servicos, historico } from "@/lib/db/schema";
+import {
+    obterSolicitacaoMockadaPorProtocolo,
+    atualizarStatusSolicitacaoMockada,
+} from "@/lib/mocks/dadosMockados";
 import { revalidatePath } from "next/cache";
 
 export type devolverSolicitacaoState = {
@@ -32,11 +35,17 @@ export async function devolverSolicitacaoAction(
     }
 
     try {
-        const [solicitacao] = await db
-            .select()
-            .from(servicos)
-            .where(eq(servicos.protocolo, protocolo))
-            .limit(1);
+        const solicitacao = await executarComFallback(
+            async () => {
+                const [sol] = await db
+                    .select()
+                    .from(servicos)
+                    .where(eq(servicos.protocolo, protocolo))
+                    .limit(1);
+                return sol ?? null;
+            },
+            () => obterSolicitacaoMockadaPorProtocolo(protocolo)
+        );
 
         if (!solicitacao) {
             return { error: 'Solicitação não encontrada.' };
@@ -47,51 +56,65 @@ export async function devolverSolicitacaoAction(
         }
 
         if (tipoDevolucao === 'devolver') {
-            await db.transaction(async (tx) => {
-                await tx
-                    .update(servicos)
-                    .set({
-                        status: 'devolvida',
-                    })
-                    .where(eq(servicos.protocolo, protocolo));
+            await executarComFallback(
+                async () => {
+                    await db.transaction(async (tx) => {
+                        await tx
+                            .update(servicos)
+                            .set({
+                                status: 'devolvida',
+                            })
+                            .where(eq(servicos.protocolo, protocolo));
 
-                // Registra auditoria no histórico
-                await tx.insert(historico).values({
-                    protocolo,
-                    idFuncionario: sessao.userId,
-                    atualizacao: `Solicitação aprovada e devolvida com sucesso para os gerentes finalizarem.`,
-                    data: new Date(),
-                });
-            });
+                        await tx.insert(historico).values({
+                            protocolo,
+                            idFuncionario: sessao.userId,
+                            atualizacao: `Solicitação aprovada e devolvida com sucesso para os gerentes finalizarem.`,
+                            data: new Date(),
+                        });
+                    });
+                },
+                () => {
+                    atualizarStatusSolicitacaoMockada(protocolo, 'devolvida');
+                    console.info(`🔄 [SAVV] Solicitação #${protocolo} devolvida (modo simulação).`);
+                }
+            );
 
             revalidatePath(`/admin/fiscal/${protocolo}`);
             revalidatePath('/admin/fiscal');
 
             return { success: true, message: 'Solicitação devolvida com sucesso!' };
         } else if (tipoDevolucao === 'cancelar') {
-            await db.transaction(async (tx) => {
-                await tx
-                    .update(servicos)
-                    .set({
-                        status: 'cancelada',
-                    })
-                    .where(eq(servicos.protocolo, protocolo));
+            await executarComFallback(
+                async () => {
+                    await db.transaction(async (tx) => {
+                        await tx
+                            .update(servicos)
+                            .set({
+                                status: 'cancelada',
+                            })
+                            .where(eq(servicos.protocolo, protocolo));
 
-                // Registra auditoria no histórico
-                await tx.insert(historico).values({
-                    protocolo,
-                    idFuncionario: sessao.userId,
-                    atualizacao: `Solicitação cancelada e devolvida para os gerentes finalizarem.`,
-                    data: new Date(),
-                });
-            });
+                        await tx.insert(historico).values({
+                            protocolo,
+                            idFuncionario: sessao.userId,
+                            atualizacao: `Solicitação cancelada e devolvida para os gerentes finalizarem.`,
+                            data: new Date(),
+                        });
+                    });
+                },
+                () => {
+                    atualizarStatusSolicitacaoMockada(protocolo, 'cancelada');
+                    console.info(`🔄 [SAVV] Solicitação #${protocolo} cancelada (modo simulação).`);
+                }
+            );
 
             revalidatePath(`/admin/fiscal/${protocolo}`);
             revalidatePath('/admin/fiscal');
 
             return { success: true, message: 'Solicitação cancelada!' };
         } else {
-            return {error: "Ocorreu um erro no processo de devolução."}
+            return { error: "Ocorreu um erro no processo de devolução." };
         }
     } catch (e) {
         console.error('Erro ao devolver solicitação!:', e);
